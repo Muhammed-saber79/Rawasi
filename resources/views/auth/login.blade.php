@@ -4,7 +4,7 @@
 <div class="container" style="height: 100vh;">
     <div class="row h-100 justify-content-center">
         <div class="col-md-6" style="margin-top: 20vh;">
-            <div class="card">
+            <div class="card" style="opacity: .7;">
                 <div class="card-header">
                     <h2 class="text-center">{{ __('Admin Login') }}</h2>
                 </div>

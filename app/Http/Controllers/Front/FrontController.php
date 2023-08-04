@@ -20,7 +20,9 @@ class FrontController extends Controller
 
         $article = Article::findOrFail($id);
         $comments = $article->comments->where('is_accepted',1) ;
-        return view('front.blog-details',compact('article','comments'));
+        $favorites = Article::where('is_favorite',1)->get();
+
+        return view('front.blog-details',compact('article','comments', 'favorites'));
     }
 
     public function projects() {

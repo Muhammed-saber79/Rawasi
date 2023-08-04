@@ -3,13 +3,13 @@
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ asset('assets/img/breadcrumbs-bg.jpg') }}');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Post Details</h2>
+      <h2>{{ __('index.Post Details') }}</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li>Post Details</li>
+        <li><a href="index.html">{{ __('index.Home') }}</a></li>
+        <li>{{ __('index.Post Details') }}</li>
       </ol>
 
     </div>
@@ -34,7 +34,7 @@
             <div class="meta-top">
               <ul>
                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-01-01">{{Carbon\Carbon::parse($article->created_at)->format('d M Y')}}</time> </li>
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> {{$article->comments->where('is_accepted',1)->count()}} Comments </li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> {{$article->comments->where('is_accepted',1)->count()}} {{ __('index.Comments') }} </li>
               </ul>
             </div><!-- End meta top -->
 
@@ -73,7 +73,7 @@
 
           <div class="comments">
 
-            <h4 class="comments-count">{{$article->comments->where('is_accepted',1)->count()}} Comments</h4>
+            <h4 class="comments-count">{{$article->comments->where('is_accepted',1)->count()}} {{ __('index.Comments') }}</h4>
 
             @foreach ($comments  as $comment)
             <div id="comment-1" class="comment">
@@ -94,27 +94,27 @@
          
             <div class="reply-form">
 
-              <h4>Leave a Reply</h4>
-              <p>Your email address will not be published. Required fields are marked * </p>
+              <h4>{{ __('index.Leave a Reply') }}</h4>
+              <p>{{ __('index.Your email address will not be published. Required fields are marked *') }} </p>
               <form action="{{route('comments.store',$article->id)}}" method="POST">
                 @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    <input name="name" type="text" class="form-control" placeholder="{{ __('index.Your Name') }}*">
                     <input name="article_id" hidden value="{{$article->id}}" >
 
                   </div>
                   <div class="col-md-6 form-group">
-                    <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    <input name="email" type="text" class="form-control" placeholder="{{ __('index.Your Email') }}*">
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col form-group">
-                    <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    <textarea name="comment" class="form-control" placeholder="{{ __('index.Your Comment') }}*"></textarea>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Post Comment</button>
+                <button type="submit" class="btn btn-primary">{{ __('index.Post Comment') }}</button>
 
               </form>
 
@@ -124,54 +124,29 @@
 
         </div>
 
-        <div class="col-lg-4">
-
+        <div class="col-lg-4 blog">
           <div class="sidebar">
 
-            <div class="sidebar-item categories">
-              <h3 class="sidebar-title">Categories</h3>
-              <ul class="mt-3">
-                <li><a href="">Homebuyers Tips</a></li>
-                <li><a href="">Smart Homes</a></li>
-                <li><a href="">Green Building</a></li>
-              </ul>
-            </div><!-- End sidebar categories-->
+        
+              <div class="sidebar-item recent-posts">
+                <h3 class="sidebar-title">{{ __('index.Featured Posts') }}</h3>
 
-            <div class="sidebar-item recent-posts">
-              <h3 class="sidebar-title">Recent Posts</h3>
+                <div class="mt-3">
 
-              <div class="mt-3">
+                  @foreach ($favorites as $favorite)
+                  <div class="post-item my-3 p-3">
+                    <img src="{{asset('images/'.$favorite->getTranslation('title','en').'/'.$favorite->image)}}" class="mx-3">
+                    <div>
+                      <h6><a href="{{route('get_article',$favorite->id)}}">{{$favorite->title}}</a></h6>
+                      <time datetime="2020-01-01">{{Carbon\Carbon::parse($favorite->created_at)->format('d M Y')}}</time>
+                    </div>
+                  </div><!-- End recent post item-->
 
-                <div class="post-item my-3 p-3">
-                  <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                  <div>
-                    <h6><a href="blog-details.html">10 Essential Tips for First-Time Homebuyers: Your Ultimate Guide</a></h6>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div><!-- End recent post item-->
-
-                <div class="post-item my-3 p-3">
-                  <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                  <div>
-                    <h6><a href="blog-details.html">The Future of Smart Homes: Embracing the Latest Innovations</a></h6>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div><!-- End recent post item-->
-
-                <div class="post-item my-3 p-3">
-                  <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                  <div>
-                    <h6><a href="blog-details.html">Sustainable Architecture: Designing Eco-Friendly Homes for a Greener Future</a></h6>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-                </div><!-- End recent post item-->
-
-              </div>
-
-            </div><!-- End sidebar recent posts-->
+                  @endforeach
+                 
+              </div><!-- End sidebar recent posts-->
 
           </div><!-- End Blog Sidebar -->
-
         </div>
       </div>
 

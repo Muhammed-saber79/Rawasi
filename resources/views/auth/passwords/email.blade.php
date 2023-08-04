@@ -4,8 +4,10 @@
 <div class="container" style="height: 100vh;">
     <div class="row justify-content-center">
         <div class="col-md-6"  style="margin-top: 20vh;">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+            <div class="card" style="opacity: .7;">
+                <div class="card-header">
+                    <h2 class="text-center">{{ __('Reset Password') }}</h2>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))

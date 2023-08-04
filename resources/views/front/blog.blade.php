@@ -81,9 +81,9 @@
 
                   @foreach ($favorites as $favorite)
                   <div class="post-item my-3 p-3">
-                    <img src="{{asset('images/'.$favorite->getTranslation('title','en').'/'.$favorite->image)}}" alt="">
+                    <img src="{{asset('images/'.$favorite->getTranslation('title','en').'/'.$favorite->image)}}" class="mx-3">
                     <div>
-                      <h6><a href="blog-details.html">{{$favorite->title}}</a></h6>
+                      <h6><a href="{{route('get_article',$favorite->id)}}">{{$favorite->title}}</a></h6>
                       <time datetime="2020-01-01">{{Carbon\Carbon::parse($favorite->created_at)->format('d M Y')}}</time>
                     </div>
                   </div><!-- End recent post item-->

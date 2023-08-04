@@ -186,4 +186,12 @@ return [
     'Blog Posts' => 'Blog Posts',
     'Blog-Text' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
     'Featured Posts' => 'Featured Posts',
+
+    // Blog Post Details...
+    'Post Details' => 'Post Details',
+    'Comments' => 'Comments',
+    'Leave a Reply' => 'Leave a Reply',
+    'Your email address will not be published. Required fields are marked *' => 'Your email address will not be published. Required fields are marked *',
+    'Your Comment' => 'Your Comment',
+    'Post Comment' => 'Post Comment',
 ];
