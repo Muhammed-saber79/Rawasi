@@ -7,11 +7,11 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">Welcome to <span class="gradient-text">Rawasi</span></h2>
+            <h2 data-aos="fade-down">{{ __('index.Welcome to') }}<span class="gradient-text">{{ __('index.Rawasi') }}</span></h2>
             <h4 data-aos="fade-up" style="color: #91c9c8;">
-              Real estate Saudi corporation
+            {{ __('index.Real estate Saudi corporation') }}
             </h4>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started gradient-bg">Get Started</a>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started gradient-bg">{{ __('index.Get Started') }}</a>
           </div>
         </div>
       </div>
@@ -36,10 +36,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>About US</h2>
+          <h2>{{ __('index.About Us') }}</h2>
           <p>
-            Rawasi real estate is a Saudi corporation with limited responsibility, its headquarters in Riyadh. It was established in 2007 by a group of local shareholders with long experience in fields of real estate services,
-            architecture, engineering and contracting in order to work in the field of real estate industry in its comprehensive concept. Listed below services that Rawasi is proud to provide to its clients
+          {{ __('index.Rawasi real estate is a Saudi corporation with limited responsibility, its headquarters in Riyadh. It was established in 2007 by a group of local shareholders with long experience in fields of real estate services,architecture, engineering and contracting in order to work in the field of real estate industry in its comprehensive concept. Listed below services that Rawasi is proud to provide to its clients') }}
           </p>
         </div>
 
@@ -53,9 +52,9 @@
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Our Vision</h4>
+                    <h4 class="card-title">{{ __('index.Our Vision') }}</h4>
                     <p>
-                      To be a major professional real estate gate in the real estate developing industry in KSA and the region.
+                    {{ __('index.To be a major professional real estate gate in the real estate developing industry in KSA and the region.') }}
                     </p>
                   </div>
                 </div>
@@ -71,9 +70,9 @@
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Our Mission</h4>
+                    <h4 class="card-title">{{ __('index.Our Mission') }}</h4>
                     <p>
-                      Building a real long-term partnership with the community by producing distinguished real estate development projects according to the highest quality standards available to serve the needs of all segments.
+                    {{ __('index.Building a real long-term partnership with the community by producing distinguished real estate development projects according to the highest quality standards available to serve the needs of all segments.') }}
                     </p>
                   </div>
                 </div>
@@ -87,12 +86,12 @@
     </section><!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="services" class="services section-bg"> 
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Services</h2>
-          <p>Our Outstanding Services: Quality and Professionalism in Every Real Estate Aspect</p>
+          <h2>{{ __('index.Services') }}</h2>
+          <p>{{ __('index.Our Outstanding Services: Quality and Professionalism in Every Real Estate Aspect') }}</p>
         </div>
 
         <div class="row gy-4">
@@ -104,12 +103,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-building"></i>
                 </div>
-                <h3>Real estate investment and development</h3>
+                <h3>{{ __('index.Real estate investment and development') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-1" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -122,12 +123,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-people-group"></i>
                 </div>
-                <h3>Real estate marketing</h3>
+                <h3>{{ __('index.Real estate marketing') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-2" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -140,12 +143,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-coins"></i>
                 </div>
-                <h3>Organize financing</h3>
+                <h3>{{ __('index.Organize financing') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-3" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -158,12 +163,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-compass-drafting"></i>
                 </div>
-                <h3>Studies</h3>
+                <h3>{{ __('index.Studies') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-4" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -176,12 +183,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-calendar-days"></i>
                 </div>
-                <h3>Facility Management Division</h3>
+                <h3>{{ __('index.Facility Management Division') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-5" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -194,12 +203,14 @@
                 <div class="icon">
                   <i class="fa-solid fa-landmark"></i>
                 </div>
-                <h3>Create and manage real estate portfolios and private endowments</h3>
+                <h3>{{ __('index.Create and manage real estate portfolios and private endowments') }}</h3>
               </div>
 
               <div>
                 <hr>
-                <a href="http://127.0.0.1:5500/services.html#service-6" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
 
             </div>
@@ -217,43 +228,45 @@
           <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center">
-            <h3>Our Strategic Goals</h3>
+            <h3>{{ __('index.Our Strategic Goals') }}</h3>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-              <i class="fa-solid fa-hotel"></i>
+              <i class="mx-3 fa-solid fa-hotel"></i>
               <div>
-                <h4>Urban Development</h4>
+                <h4>{{ __('index.Urban Development') }}</h4>
                 <p>
-                  Contribute to urban development through distinguished real estate projects.
+                  {{ __('index.Contribute to urban development through distinguished real estate projects.') }}
                 </p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-              <i class="fa-solid fa-seedling"></i>
+              <i class="mx-3 fa-solid fa-seedling"></i>
               <div>
-                <h4>Environment Caring</h4>
+                <h4>{{ __('index.Environment Caring') }}</h4>
                 <p>
-                  Caring for the environment and contributing to community service.
+                  {{ __('index.Caring for the environment and contributing to community service.') }}
                 </p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-              <i class="fa-solid fa-sack-dollar"></i>
+              <i class="mx-3 fa-solid fa-sack-dollar"></i>
               <div>
-                <h4>Cash Flow Sustainability</h4>
+                <h4>{{ __('index.Cash Flow Sustainability') }}</h4>
                 <p>
-                  Maintaining the continuity/growth of cash flows.
+                  {{ __('index.Maintaining the continuity growth of cash flows.') }}
                 </p>
               </div>
             </div><!-- End Icon Box -->
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <i class="mx-3 bi bi-brightness-high flex-shrink-0"></i>
               <div>
-                <h4>Innovation</h4>
-                <p>Providing diverse and innovative profitable Real estate investment products.</p>
+                <h4>{{ __('index.Innovation') }}</h4>
+                <p>
+                  {{ __('index.Providing diverse and innovative profitable Real estate investment products.') }}
+                </p>
               </div>
             </div><!-- End Icon Box -->
 
@@ -268,8 +281,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Our Projects</h2>
-          <p>Discover our exceptional real estate ventures, built with expertise and innovation.</p>
+          <h2>{{ __('index.Our Projects') }}</h2>
+          <p>{{ __('index.Discover our exceptional real estate ventures, built with expertise and innovation.') }}</p>
         </div>
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
@@ -355,8 +368,8 @@
       </div>
 
       <div class="text-center mt-5 mx-auto">
-        <a href="projects.html">
-          <button class="btn-contact-us">More Projects</button>
+        <a href="{{ route('projects') }}">
+          <button class="btn-contact-us">{{ __('index.More Projects') }}</button>
         </a>
       </div>
     </section><!-- End Our Projects Section -->
@@ -366,8 +379,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>Client Testimonials: Inspiring Stories from Our Customers</p>
+          <h2>{{ __('index.Testimonials') }}</h2>
+          <p>{{ __('index.Client Testimonials: Inspiring Stories from Our Customers') }}</p>
         </div>
 
         <div class="slides-2 swiper">
@@ -475,9 +488,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class=" section-header">
-          <h2>Recent Blog Posts</h2>
+          <h2>{{ __('index.Recent Blog Posts') }}</h2>
           <p>
-            Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.
+          {{ __('index.Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.') }}
           </p>
         </div>
 
@@ -507,7 +520,9 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link"><span>{{ __('index.Read More') }}</span>
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
 
               </div>
 
@@ -538,7 +553,9 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link"><span>{{ __('index.Read More') }}</span>
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
 
               </div>
 
@@ -569,7 +586,9 @@
 
                 <hr>
 
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="blog-details.html" class="readmore stretched-link"><span>{{ __('index.Read More') }}</span>
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
 
               </div>
 
@@ -579,8 +598,8 @@
         </div>
 
         <div class="text-center mt-5 mx-auto">
-          <a href="blog.html">
-            <button class="btn-contact-us">Move To Blog</button>
+          <a href="{{ route('articles') }}">
+            <button class="btn-contact-us">{{ __('index.Move To Blog') }}</button>
           </a>
         </div>
 

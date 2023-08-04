@@ -105,7 +105,7 @@
 
 <div class="text-center my-5 mx-auto">
   <hr class="w-75 m-auto my-5">
-  <a href="contact.html">
+  <a href="{{ route('contact') }}">
     <button class="btn-contact-us">Contact US</button>
   </a>
 </div>

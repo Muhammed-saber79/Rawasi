@@ -4,9 +4,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Work Sans", sans-serif;
+  --font-default: "Noto Kufi Arabic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Noto Kufi Arabic", sans-serif;
+  --font-secondary: "Noto Kufi Arabic", sans-serif;
 }
 
 /* Colors */
@@ -1105,10 +1105,10 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 215px;
   height: 3px;
   background: var(--color-primary);
-  left: 0;
+  /* left: 0; */
   bottom: 0;
 }
 
