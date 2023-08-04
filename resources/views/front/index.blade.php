@@ -1,6 +1,6 @@
 @extends('layouts.front')
 @section('content')
-      <!-- ======= Hero Section ======= -->
+  <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">
 
     <div class="info d-flex align-items-center">

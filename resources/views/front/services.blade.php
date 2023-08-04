@@ -9,7 +9,7 @@
 
         <h2>{{ __('index.Services') }}</h2>
         <ol>
-          <li><a href="index.html">{{ __('index.Home') }}</a></li>
+        <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
           <li>{{ __('index.Services') }}</li>
         </ol>
 

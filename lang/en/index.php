@@ -162,6 +162,28 @@ return [
     resulting from inheritances or owned by persons They have no interest
     in real estate activity and its services.',
 
-    '' => '',
-    '' => '',
+    // Project Details Page...
+    'Project Details' => 'Project Details',
+    'Project information' => 'Project information',
+    'Owner' => 'Owner',
+    'Location' => 'Location',
+    'Type' => 'Type',
+    'Project State' => 'Project State',
+
+    // Contact Page...
+    'Our Address' => 'Our Address',
+    'Email Us' => 'Email Us',
+    'Call Us' => 'Call Us',
+    'Your Name' => 'Your Name',
+    'Your Email' => 'Your Email',
+    'Subject' => 'Subject',
+    'Message' => 'Message',
+    'Loading' => 'Loading',
+    'Your message has been sent. Thank you!' => 'Your message has been sent. Thank you!',
+    'Send Message' => 'Send Message',
+    
+    // Blog Page...
+    'Blog Posts' => 'Blog Posts',
+    'Blog-Text' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
+    'Featured Posts' => 'Featured Posts',
 ];

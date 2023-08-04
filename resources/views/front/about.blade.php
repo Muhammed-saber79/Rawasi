@@ -8,7 +8,7 @@
 
       <h2>{{ __('index.About') }}</h2>
       <ol>
-        <li><a href="index.html">{{ __('index.Home') }}</a></li>
+        <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
         <li>{{ __('index.About') }}</li>
       </ol>
 
