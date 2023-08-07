@@ -25,7 +25,7 @@
             <i class="bi bi-map"></i>
             <h3>{{ __('index.Our Address') }}</h3>
             <p>
-              {{ __('index.Malga, Riyadh, Saudi Arabia') }} ({{ __('index.Alqayrawan, Alkhear Road') }})
+            {{ __('index.Riyadh') }}, {{ __('index.Saudi Arabia') }}<br><br>
             </p>
           </div>
         </div><!-- End Info Item -->

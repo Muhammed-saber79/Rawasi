@@ -58,7 +58,7 @@
              <tr>
               <td>{{$loop->iteration}}</td>
               <td >{{$project->title}}</td>
-              <td>{{$project->description}}</td>
+              <td>{!! $project->description !!}</td>
               <td>{{$project->location}}</td>
               <td>{{$project->prochure}}</td>
               <td>{{$project->city->name}}</td>
