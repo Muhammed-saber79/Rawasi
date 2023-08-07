@@ -60,6 +60,16 @@
       height: 100%;
       object-fit: cover;
     }
+
+    #intro-video::-webkit-media-controls-panel {
+    display: none !important;
+    }
+    #intro-video::-webkit-media-controls-play-button {
+        display: none !important;
+    }
+    #intro-video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+    }
   </style>
 </head>
 
@@ -77,13 +87,14 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() ? 'active' : '' }}" href="{{url('/')}}">{{ __('index.Home') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/about' ? 'active' : '' }}" href="{{route('about')}}">{{ __('index.About') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/services' ? 'active' : '' }}" href="{{route('services')}}">{{ __('index.Services') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/projects' ? 'active' : '' }}" href="{{route('projects')}}">{{ __('index.Projects') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ? 'active' : '' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ? 'active' : '' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
-          <li class="dropdown"><a href="#"><span>{{ __('index.Language') }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() ?? 'active' }}" href="{{url('/')}}">{{ __('index.Home') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/about' ?? 'active' }}" href="{{route('about')}}">{{ __('index.About') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/services' ?? 'active' }}" href="{{route('services')}}">{{ __('index.Services') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/projects' ?? 'active' }}" href="{{route('projects')}}">{{ __('index.Projects') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ?? 'active' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ?? 'active' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
+          <li class="dropdown">
+            <a href="#"><span>{{ __('index.Language') }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <li>
@@ -184,6 +195,15 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
+
+  <script>
+      const languageDropdown = document.getElementById('languageDropdown');
+      const languageSubMenu = languageDropdown.querySelector('ul');
+
+      languageDropdown.addEventListener('click', () => {
+          languageSubMenu.classList.toggle('show-language-dropdown');
+      });
+  </script>
 
 </body>
 

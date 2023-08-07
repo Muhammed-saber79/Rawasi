@@ -3,19 +3,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">
 
-    <div class="info d-flex align-items-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">{{ __('index.Welcome to') }}<span class="gradient-text">{{ __('index.Rawasi') }}</span></h2>
-            <h4 data-aos="fade-up" style="color: #91c9c8;">
-            {{ __('index.Real estate Saudi corporation') }}
-            </h4>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started gradient-bg">{{ __('index.Get Started') }}</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
 
     <div id="hero-carousel">
