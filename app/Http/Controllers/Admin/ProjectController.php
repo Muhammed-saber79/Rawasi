@@ -46,7 +46,7 @@ class ProjectController extends Controller
                 'description_en'=>'required',
                 'location_ar'=>'required',
                 'location_en'=>'required',
-                'prochure'=>'required',
+                // 'prochure'=>'required',
                 'gps'=>'required',
                 'images'=>'required'
                ]);

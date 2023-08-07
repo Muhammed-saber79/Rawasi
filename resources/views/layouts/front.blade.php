@@ -17,6 +17,8 @@
   <title>{{ __('index.Rawasi') }} | {{ __('index.Blog') }}</title>
   @elseif (Route::current()->uri() == App::getLocale() . '/contact')
   <title>{{ __('index.Rawasi') }} | {{ __('index.Contact') }}</title>
+  @elseif (Route::current()->uri() == App::getLocale() . '/article/{id}')
+  <title>{{ __('index.Rawasi') }} | {{ __('index.Post Details') }}</title>
   @endif
 
 

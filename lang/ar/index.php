@@ -157,5 +157,4 @@ return [
     'Your email address will not be published. Required fields are marked *' => 'لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة مُشار إليها بـ *',
     'Your Comment' => 'يمكنك كتابة وصف للتعليق الخاص بك هنا',
     'Post Comment' => 'ارسال التعليق',
-
 ];

@@ -162,6 +162,13 @@ return [
     resulting from inheritances or owned by persons They have no interest
     in real estate activity and its services.',
 
+    // Projects Categories...
+    'All' => 'All',
+    'Remodeling' => 'Remodeling',
+    'Construction' => 'Construction',
+    'Repairs' => 'Repairs',
+    'Design' => 'Design',
+
     // Project Details Page...
     'Project Details' => 'Project Details',
     'Project information' => 'Project information',

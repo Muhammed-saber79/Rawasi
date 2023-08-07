@@ -37,8 +37,7 @@ Route::group(
     	Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
             Route::resource('projects',ProjectController::class);
             Route::resource('articles',ArticleController::class);
-            Route::resource('comments',CommentController::class);
-            Route::resource('messages',MessageController::class);
+            
             Route::get('project_images/{id}',[ProjectController::class,'project_images'])->name('project_images');
             Route::post('project_add_images/{id}',[ProjectController::class ,'add_images'])->name('project_add_images');
             Route::get('delete_project_image/{id}',[ProjectController::class,'delete_project_image'])->name('delete_project_image');
@@ -46,9 +45,19 @@ Route::group(
             Route::get('comment_delete/{id}',[CommentController::class,'destroy'])->name('comment_delete');
         });
 
+        Route::group([
+            'prefix' => 'admin'
+        ], function () {
+            Route::resource('messages',MessageController::class);
+            Route::resource('comments',CommentController::class);
+        });
+
         /**  All Website Routes **/
-        Route::get('/', function () {
-            return view('front.index');
+        Route::get('/', function (){
+            $projects = Project::all();
+            $articles = Article::all();
+
+            return view('front.index', compact('projects', 'articles'));
         })->name('index');
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
