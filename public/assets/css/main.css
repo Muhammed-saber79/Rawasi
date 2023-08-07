@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Kufi Arabic", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Work Sans", sans-serif;
 }
@@ -296,8 +296,8 @@ section {
     padding: 0 3px;
     font-family: var(--font-primary);
     font-size: 14px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    font-weight: var(--font-default-weight);
+    color: var(--color-primary);
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
@@ -318,7 +318,7 @@ section {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -335,7 +335,11 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: rgba(26, 133, 191, 0.8);
+  }
+
+  .navbar .active {
+    color: rgba(26, 133, 191, 0.8);
   }
 
   .navbar .dropdown ul {

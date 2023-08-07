@@ -30,9 +30,13 @@
   <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200&display=swap" rel="stylesheet"> -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200&family=Noto+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -43,14 +47,14 @@
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  @if (App::getLocale() == 'en'):
+  @if (App::getLocale() == 'en')
     <link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
   @else
     <link href="{{asset('assets/css/main-ar.css')}}" rel="stylesheet">
   @endif
 
   <style>
-    #hero-carousel {
+    #hero, #hero-carousel {
       width: 100%;
       height: 100vh; /* Adjust the height as needed */
     }
@@ -70,29 +74,32 @@
     #intro-video::-webkit-media-controls-start-playback-button {
         display: none !important;
     }
+
+
   </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between text-danger">
+  <header id="header" class="header d-flex align-items-center" style="height: 5rem;">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between text-danger" style="height: 5rem;">
 
       <a href="{{url('/')}}" class="logo d-flex align-items-center">
-        <img src="{{asset('assets/img/logo.png')}}" alt="Rawasi-logo" height="100">
+        <img src="{{asset('assets/img/logo.png')}}" alt="Rawasi-logo" height="75">
       </a>      
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list text-info"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() ?? 'active' }}" href="{{url('/')}}">{{ __('index.Home') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/about' ?? 'active' }}" href="{{route('about')}}">{{ __('index.About') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/services' ?? 'active' }}" href="{{route('services')}}">{{ __('index.Services') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/projects' ?? 'active' }}" href="{{route('projects')}}">{{ __('index.Projects') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ?? 'active' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ?? 'active' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() ? 'active' : '' }}" href="{{url('/')}}">{{ __('index.Home') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/about' ? 'active' : '' }}" href="{{route('about')}}">{{ __('index.About') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/services' ? 'active' : '' }}" href="{{route('services')}}">{{ __('index.Services') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/projects' ? 'active' : '' }}" href="{{route('projects')}}">{{ __('index.Projects') }}</a></li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ? 'active' : '' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ? 'active' : '' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
           <li class="dropdown">
             <a href="#"><span>{{ __('index.Language') }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>

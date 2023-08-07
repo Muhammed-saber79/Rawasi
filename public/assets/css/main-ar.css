@@ -7,6 +7,10 @@
   --font-default: "Noto Kufi Arabic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Noto Kufi Arabic", sans-serif;
   --font-secondary: "Noto Kufi Arabic", sans-serif;
+
+  --font-default-weight: 600;
+  --font-primary-weight: 700;
+  --font-secondary-weight: 700;
 }
 
 /* Colors */
@@ -297,8 +301,8 @@ section {
     padding: 0 3px;
     font-family: var(--font-primary);
     font-size: 14px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    font-weight: var(--font-primary-weight);
+    color: var(--color-primary);
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
@@ -336,7 +340,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: rgba(26, 133, 191, 0.8);
   }
 
   .navbar .dropdown ul {
