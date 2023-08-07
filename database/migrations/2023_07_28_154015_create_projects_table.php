@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('gps');
             $table->string('prochure')->nullable();
             $table->timestamps();
+
+            $table->foreignId('city_id')->constrained('cities', 'id');
         });
     }
 

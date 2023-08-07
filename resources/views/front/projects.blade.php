@@ -3,13 +3,13 @@
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ asset('assets/img/breadcrumbs-bg.jpg') }}');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Projects</h2>
+      <h2>{{ __('index.Projects') }}</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li>Projects</li>
+      <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
+        <li>{{ __('index.Projects') }}</li>
       </ol>
 
     </div>
@@ -20,24 +20,23 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Our Projects</h2>
-        <p>Discover our exceptional real estate ventures, built with expertise and innovation.</p>
+        <h2>{{ __('index.Our Projects') }}</h2>
+        <p>{{ __('index.Discover our exceptional real estate ventures, built with expertise and innovation.') }}</p>
       </div>
 
       <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
 
         <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-remodeling">Remodeling</li>
-          <li data-filter=".filter-construction">Construction</li>
-          <li data-filter=".filter-repairs">Repairs</li>
-          <li data-filter=".filter-design">Design</li>
+          <li data-filter="*" class="filter-active">{{ __('index.All') }}</li>
+          @foreach($cities as $city)
+            <li data-filter=".filter-{{ $city->name }}">{{ $city->name }}</li>
+          @endforeach
         </ul><!-- End Projects Filters -->
         
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach ($projects as $project)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $project->city->name }}">
             <div class="portfolio-content h-100">
               <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -49,10 +48,8 @@
               </div>
             </div>
           </div><!-- End Projects Item -->
-
           @endforeach
           
-    
         </div><!-- End Projects Container -->
 
       </div>
@@ -65,8 +62,8 @@
 
 <div class="text-center my-5 mx-auto">
   <hr class="w-75 m-auto my-5">
-  <a href="contact.html">
-    <button class="btn-contact-us">Contact US</button>
+  <a href="{{ route('contact') }}">
+    <button class="btn-contact-us">{{ __('index.Contact') }}</button>
   </a>
 </div>
 

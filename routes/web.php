@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Controllers\Admin\ProjectController;
-use App\Http\Controllers\Admin\ArticleController;
-use App\Http\Controllers\Admin\CommentController;
-use App\Http\Controllers\Admin\MessageController;
-use App\Http\Controllers\Front\FrontController;
 use App\Models\Article;
 use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CityController;
+use App\Http\Controllers\Admin\CommentController;
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ProjectController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,72 +23,65 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// routes/web.php
 
-
-
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
-
-    Route::resource('projects',ProjectController::class);
-Route::resource('articles',ArticleController::class);
-Route::resource('comments',CommentController::class);
-Route::resource('messages',MessageController::class);
-Route::get('project_images/{id}',[ProjectController::class,'project_images'])->name('project_images');
-Route::post('project_add_images/{id}',[ProjectController::class ,'add_images'])->name('project_add_images');
-Route::get('delete_project_image/{id}',[ProjectController::class,'delete_project_image'])->name('delete_project_image');
-Route::get('accept_comment/{id}',[CommentController::class,'accept_comment'])->name('accept_comment');
-Route::get('comment_delete/{id}',[CommentController::class,'destroy'])->name('comment_delete');
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Auth::routes();
 
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){ //...
-   
-        
-Route::get('/', function () {
-    return view('front.index');
-})->name('index');
+    ],function(){
+    	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 
-Route::get('/about', function () {
-    return view('front.about');
-})->name('about');
+        /**  All Dashboard Routes **/
+    	Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+            Route::resource('projects',ProjectController::class);
+            Route::resource('articles',ArticleController::class);
+            Route::resource('cities',CityController::class);
+            
+            Route::get('project_images/{id}',[ProjectController::class,'project_images'])->name('project_images');
+            Route::post('project_add_images/{id}',[ProjectController::class ,'add_images'])->name('project_add_images');
+            Route::get('delete_project_image/{id}',[ProjectController::class,'delete_project_image'])->name('delete_project_image');
+            Route::get('accept_comment/{id}',[CommentController::class,'accept_comment'])->name('accept_comment');
+            Route::get('comment_delete/{id}',[CommentController::class,'destroy'])->name('comment_delete');
+        });
 
-Route::get('/services', function () {
-    return view('front.services');
-})->name('services');
+        Route::group([
+            'prefix' => 'admin'
+        ], function () {
+            Route::resource('messages',MessageController::class);
+            Route::resource('comments',CommentController::class);
+        });
 
-Route::get('/contact', function () {
-    return view('front.contact');
-})->name('contact');
+        /**  All Website Routes **/
+        Route::get('/', function (){
+            $projects = Project::latest()->take(3)->get();
+            $articles = Article::latest()->take(3)->get();
 
-Route::get('/articles', [FrontController::class,'articles'])->name('articles');
-Route::get('article/{id}',[FrontController::class,'get_article'])->name('get_article');
+            return view('front.index', compact('projects', 'articles'));
+        })->name('index');
 
-Route::get('/projects', [FrontController::class,'projects'])->name('projects');
-Route::get('get_project/{id}',[FrontController::class ,'get_project'])->name('get_project');
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+        Route::get('/about', function () {
+            return view('front.about');
+        })->name('about');
 
+        Route::get('/services', function () {
+            return view('front.services');
+        })->name('services');
 
+        Route::get('/contact', function () {
+            return view('front.contact');
+        })->name('contact');
 
-});
+        Route::get('/articles', [FrontController::class,'articles'])->name('articles');
+        Route::get('article/{id}',[FrontController::class,'get_article'])->name('get_article');
 
-Auth::routes();
+        Route::get('/projects', [FrontController::class,'projects'])->name('projects');
+        Route::get('get_project/{id}',[FrontController::class ,'get_project'])->name('get_project');
+    }
+);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/

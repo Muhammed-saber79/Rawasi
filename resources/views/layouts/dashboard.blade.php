@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>{{ __('index.Rawasi') }} | {{ __('dashboard.Dashboard') }}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -162,6 +162,16 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 طلبات التواصل
+{{--                <span class="badge badge-info right">2</span>--}}
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('cities.index')}}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                 المدن
 {{--                <span class="badge badge-info right">2</span>--}}
               </p>
             </a>

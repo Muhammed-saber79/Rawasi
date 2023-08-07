@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use Exception;
+use App\Models\City;
 use App\Models\Image;
 use App\Models\Project;
-use App\Services\ProjectsService;
-use Exception;
 use Illuminate\Http\Request;
+use App\Services\ProjectsService;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -28,7 +29,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $cities = City::all();
+        return view('admin.projects.create', compact('cities'));
     }
 
     /**
@@ -46,16 +48,18 @@ class ProjectController extends Controller
                 'description_en'=>'required',
                 'location_ar'=>'required',
                 'location_en'=>'required',
-                'prochure'=>'required',
+                // 'prochure'=>'required',
                 'gps'=>'required',
-                'images'=>'required'
-               ]);
+                'images'=>'required',
+                'city' => 'exists:cities,id'
+            ]);
         
                $project = Project::create([
                 'title'=> ['ar'=>$request->title_ar ,'en'=>$request->title_en] ,
                 'description'=>['ar'=>$request->description_ar ,'en'=>$request->description_en],
                 'location'=>['ar'=>$request->location_ar ,'en'=>$request->location_en],
-                'gps'=>$request->gps 
+                'gps'=>$request->gps,
+                'city_id' => $request->city,
                ]);
                $images = $request->images ;
                $prochure = $request->prochure ;
@@ -100,7 +104,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit',compact('project'));
+        $cities = City::all();
+        return view('admin.projects.edit',compact('project', 'cities'));
     }
 
     /**
@@ -120,13 +125,15 @@ class ProjectController extends Controller
                 'location_ar'=>'required',
                 'location_en'=>'required',
                 'gps'=>'required',
+                'city' => 'exists:cities,id'
                ]);
         
                $project->update([
                 'title'=> ['ar'=>$request->title_ar ,'en'=>$request->title_en] ,
                 'description'=>['ar'=>$request->description_ar ,'en'=>$request->description_en],
                 'location'=>['ar'=>$request->location_ar ,'en'=>$request->location_en],
-                'gps'=>$request->gps 
+                'gps'=>$request->gps,
+                'city_id' => $request->city
                ]);
         
                if($request->has('prochure')){

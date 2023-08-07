@@ -16,4 +16,8 @@ class Project extends Model
     public function images() : MorphMany {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    public function city() {
+        return $this->belongsTo(City::class);
+    }
 }

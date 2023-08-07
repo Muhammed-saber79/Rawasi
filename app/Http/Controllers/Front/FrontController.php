@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Models\City;
 use App\Models\Article;
 use App\Models\Comment;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
@@ -20,13 +21,16 @@ class FrontController extends Controller
 
         $article = Article::findOrFail($id);
         $comments = $article->comments->where('is_accepted',1) ;
-        return view('front.blog-details',compact('article','comments'));
+        $favorites = Article::where('is_favorite',1)->get();
+
+        return view('front.blog-details',compact('article','comments', 'favorites'));
     }
 
     public function projects() {
         $projects = Project::all();
-        
-        return view('front.projects',compact('projects'));
+        $cities = City::all();
+
+        return view('front.projects',compact('projects', 'cities'));
     }
 
     public function get_project($id){

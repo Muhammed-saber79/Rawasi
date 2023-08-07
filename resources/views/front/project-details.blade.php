@@ -4,13 +4,13 @@
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ asset('assets/img/breadcrumbs-bg.jpg') }}');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Project Details</h2>
+      <h2>{{ __('index.Project Details') }}</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li>Project Details</li>
+      <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
+        <li>{{ __('index.Project Details') }}</li>
       </ol>
 
     </div>
@@ -55,13 +55,13 @@
 
         <div class="col-lg-3">
           <div class="portfolio-info">
-            <h3>{{__('lang.')}}Project information</h3>
+            <h3>{{ __('index.Project information') }}</h3>
             <ul>
-              <li><strong>{{__('lang.Owner')}}</strong> <span>Private</span></li>
-              <li><strong>{{__('lang.Location')}}</strong> <span>Eastern Province</span></li>
-              <li><strong>{{__('lang.')}}Space</strong> <span>400,000 m2 approximately</span></li>
-              <li><strong>{{__('lang.')}}Type</strong> <span>Recreational, Commercial, Administrative</span></li>
-              <li><strong>{{__('lang.')}}Project state</strong> <span>Under studying</span></li>
+              <li><strong>{{ __('index.Owner') }}</strong> <span>Private</span></li>
+              <li><strong>{{ __('index.Location') }}</strong> <span>Eastern Province</span></li>
+              <li><strong>{{ __('index.') }}Space</strong> <span>400,000 m2 approximately</span></li>
+              <li><strong>{{ __('index.Type') }}</strong> <span>Recreational, Commercial, Administrative</span></li>
+              <li><strong>{{ __('index.Project State') }}</strong> <span>Under studying</span></li>
             </ul>
           </div>
         </div>
@@ -75,8 +75,8 @@
 
 <div class="text-center my-5 mx-auto">
   <hr class="w-75 m-auto my-5">
-  <a href="contact.html">
-    <button class="btn-contact-us">Contact US</button>
+  <a href="{{ route('contact') }}">
+    <button class="btn-contact-us">{{ __('index.Contact') }}</button>
   </a>
 </div>
 

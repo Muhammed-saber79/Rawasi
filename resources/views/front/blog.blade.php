@@ -6,10 +6,10 @@
   <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../assets/img/breadcrumbs-bg.jpg');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Blog</h2>
+      <h2>{{ __('index.Blog') }}</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li>Blog</li>
+      <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
+        <li>{{ __('index.Blog') }}</li>
       </ol>
 
     </div>
@@ -20,9 +20,9 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class=" section-header">
-        <h2>Blog Posts</h2>
+        <h2>{{ __('index.Blog Posts') }}</h2>
         <p>
-          Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.
+          {{ __('index.Blog-Text') }}
         </p>
       </div>
 
@@ -56,8 +56,9 @@
   
                 <hr>
   
-                <a href="{{route('get_article',$article->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-  
+                <a href="{{route('get_article',$article->id)}}" class="readmore stretched-link"><span>{{ __('index.Read More') }}</span>
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
               </div>
   
             </div>
@@ -74,15 +75,15 @@
 
         
               <div class="sidebar-item recent-posts">
-                <h3 class="sidebar-title">Featured Posts</h3>
+                <h3 class="sidebar-title">{{ __('index.Featured Posts') }}</h3>
 
                 <div class="mt-3">
 
                   @foreach ($favorites as $favorite)
                   <div class="post-item my-3 p-3">
-                    <img src="{{asset('images/'.$favorite->getTranslation('title','en').'/'.$favorite->image)}}" alt="">
+                    <img src="{{asset('images/'.$favorite->getTranslation('title','en').'/'.$favorite->image)}}" class="mx-3">
                     <div>
-                      <h6><a href="blog-details.html">{{$favorite->title}}</a></h6>
+                      <h6><a href="{{route('get_article',$favorite->id)}}">{{$favorite->title}}</a></h6>
                       <time datetime="2020-01-01">{{Carbon\Carbon::parse($favorite->created_at)->format('d M Y')}}</time>
                     </div>
                   </div><!-- End recent post item-->
@@ -105,8 +106,8 @@
 
 <div class="text-center my-5 mx-auto">
   <hr class="w-75 m-auto my-5">
-  <a href="contact.html">
-    <button class="btn-contact-us">Contact US</button>
+  <a href="{{ route('contact') }}">
+    <button class="btn-contact-us">{{ __('index.Contact') }}</button>
   </a>
 </div>
 

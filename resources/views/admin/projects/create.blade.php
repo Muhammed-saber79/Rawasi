@@ -76,13 +76,29 @@
                       <label for="field1">لينك الموقع     </label>
                       <input type="text" name="gps" value="{{old('gps')}}" class="form-control" id="field1">
                     </div>
-                   
+                    <div class="col-md-6">
+                      <label for="field1">المدينة</label>
+                      <select name="city" id="city" class="form-control">
+                        @foreach($cities as $city)
+                          <option value="{{ $city->id }}"> {{ $city->name }} </option>
+                        @endforeach
+                      </select>
+                    </div>
                   </div>
                   <br>
                   <div class="row">
                     <div class="col-md-12">
                       <label for="field4"> الوصف باللغة العربية </label>
-                      <textarea type="text" name="description_ar" class="form-control" id="field4">{{old('description_ar')}}</textarea>
+                    
+                      <div class="card-body pad">
+                        <div class="mb-3">
+                          <textarea class="textarea" name="description_ar" placeholder="Place some text here"
+                                    style="height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                          </textarea>
+                        </div>
+                       
+                      </div> 
+
                     </div>
                    
                   </div>
@@ -91,7 +107,15 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label for="field4"> الوصف باللغة الانجليزية</label>
-                      <textarea type="text"  name="description_en" class="form-control" id="field4">{{old('description_en')}}</textarea>
+
+                      <div class="card-body pad">
+                        <div class="mb-3">
+                          <textarea class="textarea" name="description_en" placeholder="Place some text here"
+                                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                        </div>
+                       
+                      </div>  
+
                     </div>
                    
                   </div>
