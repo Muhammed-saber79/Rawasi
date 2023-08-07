@@ -75,7 +75,8 @@ return [
     
     // Footer...
     'Alqayrawan, Alkhear Road' => 'القيروان، طريق الخير',
-    'Malga, Riyadh, Saudi Arabia' => 'ملقا، الرياض، المملكة العربية السعودية',
+    'Riyadh' => 'الرياض',
+    'Saudi Arabia' => 'المملكة العربية السعودية',
     'Phone:' => 'الهاتف:',
     'Email:' => 'البريد الإلكتروني:',
     'Useful Links' => 'روابط مفيدة',

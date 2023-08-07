@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Models\City;
 use App\Models\Article;
 use App\Models\Comment;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
@@ -27,8 +28,9 @@ class FrontController extends Controller
 
     public function projects() {
         $projects = Project::all();
-        
-        return view('front.projects',compact('projects'));
+        $cities = City::all();
+
+        return view('front.projects',compact('projects', 'cities'));
     }
 
     public function get_project($id){

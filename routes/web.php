@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -37,6 +38,7 @@ Route::group(
     	Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
             Route::resource('projects',ProjectController::class);
             Route::resource('articles',ArticleController::class);
+            Route::resource('cities',CityController::class);
             
             Route::get('project_images/{id}',[ProjectController::class,'project_images'])->name('project_images');
             Route::post('project_add_images/{id}',[ProjectController::class ,'add_images'])->name('project_add_images');
@@ -54,8 +56,8 @@ Route::group(
 
         /**  All Website Routes **/
         Route::get('/', function (){
-            $projects = Project::all();
-            $articles = Article::all();
+            $projects = Project::latest()->take(3)->get();
+            $articles = Article::latest()->take(3)->get();
 
             return view('front.index', compact('projects', 'articles'));
         })->name('index');

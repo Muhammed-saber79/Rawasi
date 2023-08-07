@@ -28,16 +28,15 @@
 
         <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">{{ __('index.All') }}</li>
-          <li data-filter=".filter-remodeling">{{ __('index.Remodeling') }}</li>
-          <li data-filter=".filter-construction">{{ __('index.Construction') }}</li>
-          <li data-filter=".filter-repairs">{{ __('index.Repairs') }}</li>
-          <li data-filter=".filter-design">{{ __('index.Design') }}</li>
+          @foreach($cities as $city)
+            <li data-filter=".filter-{{ $city->name }}">{{ $city->name }}</li>
+          @endforeach
         </ul><!-- End Projects Filters -->
         
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach ($projects as $project)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $project->city->name }}">
             <div class="portfolio-content h-100">
               <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -49,10 +48,8 @@
               </div>
             </div>
           </div><!-- End Projects Item -->
-
           @endforeach
           
-    
         </div><!-- End Projects Container -->
 
       </div>

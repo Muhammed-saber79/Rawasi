@@ -115,8 +115,7 @@
                 <img src="{{asset('assets/img/logo.png')}}" alt="Rawasi-logo" width="100">
               </a>
               <p @if(App::getLocale() != 'en'): class="text-lg-end text-sm-end" @endif >
-                {{ __('index.Alqayrawan, Alkhear Road') }} <br>
-                {{ __('index.Malga, Riyadh, Saudi Arabia') }}<br><br>
+                {{ __('index.Riyadh') }}, {{ __('index.Saudi Arabia') }}<br><br>
                 <strong>{{ __('index.Phone:') }}</strong> 00966&nbsp;11&nbsp;238&nbsp;60&nbsp;90<br>
                 <strong>{{ __('index.Email:') }}</strong> info@rawasi-sa.com<br>
               </p>

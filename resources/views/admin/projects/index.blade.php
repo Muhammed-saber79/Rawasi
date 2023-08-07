@@ -47,6 +47,7 @@
                     <th>الوصف </th>
                     <th>الموقع </th>
                     <th>المرفق </th>
+                    <th>المدينة</th>
                     <th>الصور</th>
                     <th>الخيارات</th>
                   </tr>
@@ -60,6 +61,8 @@
               <td>{{$project->description}}</td>
               <td>{{$project->location}}</td>
               <td>{{$project->prochure}}</td>
+              <td>{{$project->city->name}}</td>
+
               <td><a href="{{route('project_images',$project->id)}}">اظهار({{$project->images->count()}})</a></td>
               <td>
                 <a href="{{route('projects.edit',$project)}}" class="btn  btn-outline-warning">تعديل</a>

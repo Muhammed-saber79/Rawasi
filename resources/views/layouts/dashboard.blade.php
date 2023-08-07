@@ -166,6 +166,16 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{route('cities.index')}}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                 المدن
+{{--                <span class="badge badge-info right">2</span>--}}
+              </p>
+            </a>
+          </li>
 {{--            <li class="nav-item">--}}
 {{--                <a href="{{route('grades.index')}}" class="nav-link">--}}
 {{--                    <i class="nav-icon far fa-image"></i>--}}

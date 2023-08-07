@@ -75,7 +75,8 @@ return [
     
     // Footer...
     'Alqayrawan, Alkhear Road' => 'Alqayrawan, Alkhear Road',
-    'Malga, Riyadh, Saudi Arabia' => 'Malga, Riyadh, Saudi Arabia',
+    'Riyadh' => 'Riyadh',
+    'Saudi Arabia' => 'Saudi Arabia',
     'Phone:' => 'Phone:',
     'Email:' => 'Email:',
     'Useful Links' => 'Useful Links',
