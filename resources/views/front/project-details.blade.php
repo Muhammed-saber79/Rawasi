@@ -62,6 +62,14 @@
               <li><strong>{{ __('index.') }}Space</strong> <span>400,000 m2 approximately</span></li>
               <li><strong>{{ __('index.Type') }}</strong> <span>Recreational, Commercial, Administrative</span></li>
               <li><strong>{{ __('index.Project State') }}</strong> <span>Under studying</span></li>
+              <li>
+                <div class="text-center my-5 mx-auto">
+                  <hr class="w-75 m-auto my-5">
+                  <a href="{{ route('contact') }}">
+                    <button class="btn-contact-us">{{ __('index.Contact') }}</button>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
