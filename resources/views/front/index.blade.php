@@ -1,10 +1,7 @@
 @extends('layouts.front')
 @section('content')
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
-
-    
-
+  <section id="hero" class="d-block">
 
     <div id="hero-carousel">
 
@@ -282,11 +279,11 @@
             <div class="portfolio-content h-100">
               <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                {{-- <h4>Remodeling 1</h4> --}}
+                <h4>{{ $project->city->name }}</h4>
                 <p>{{$project->title}}</p>
                 
-                <a href="assets/img/projects/remodeling-1.jpg" title="Remodeling 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="{{route('get_project',$project->id)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{{ asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image) }}" title="{{ $project->city->name }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="{{ route('get_project',$project->id) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Projects Item -->
@@ -306,7 +303,7 @@
     </section><!-- End Our Projects Section -->
 
     <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts section-bg">
+    <section id="recent-blog-posts" class="recent-blog-posts">
       <div class="container" data-aos="fade-up">
 
         <div class=" section-header">
