@@ -32,17 +32,17 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
               <div class="row">
-                <div class="col-xl-5">
+                {{-- <div class="col-xl-5">
                   <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
+                </div> --}}
+             
+                  <div class="card-body text-center">
                     <h4 class="card-title">{{ __('index.Our Vision') }}</h4>
-                    <p>
+                    <p style="color: #445f79">
                     {{ __('index.To be a major professional real estate gate in the real estate developing industry in KSA and the region.') }}
                     </p>
                   </div>
-                </div>
+              
               </div>
             </div>
           </div><!-- End Card Item -->
@@ -50,17 +50,17 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card-item">
               <div class="row">
-                <div class="col-xl-5">
+                {{-- <div class="col-xl-5">
                   <div class="card-bg" style="background-image: url(assets/img/constructions-3.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
+                </div> --}}
+               
+                  <div class="card-body text-center">
                     <h4 class="card-title">{{ __('index.Our Mission') }}</h4>
-                    <p>
+                    <p style="color: #445f79">
                     {{ __('index.Building a real long-term partnership with the community by producing distinguished real estate development projects according to the highest quality standards available to serve the needs of all segments.') }}
                     </p>
                   </div>
-                </div>
+               
               </div>
             </div>
           </div><!-- End Card Item -->
@@ -295,71 +295,15 @@
 
       </div>
 
-      <div class="text-center mt-5 mx-auto">
+      {{-- <div class="text-center mt-5 mx-auto">
         <a href="{{ route('projects') }}">
           <button class="btn-contact-us">{{ __('index.More Projects') }}</button>
         </a>
-      </div>
+      </div> --}}
     </section><!-- End Our Projects Section -->
 
     <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-      <div class="container" data-aos="fade-up">
-
-        <div class=" section-header">
-          <h2>{{ __('index.Recent Blog Posts') }}</h2>
-          <p>
-          {{ __('index.Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.') }}
-          </p>
-        </div>
-
-        <div class="row gy-5">
-
-          @foreach($articles as $article)
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                <span class="post-date">{{Carbon\Carbon::parse($article->created_at)->format('d M Y')}}</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">{{$article->title}}</h3>
-
-                {{-- <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Homebuyers Tips</span>
-                  </div>
-                </div> --}}
-
-                <hr>
-
-                <a href="{{route('get_article',$article->id)}}" class="readmore stretched-link"><span>{{ __('index.Read More') }}</span>
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-          @endforeach
-          
-        </div>
-
-        <div class="text-center mt-5 mx-auto">
-          <a href="{{ route('articles') }}">
-            <button class="btn-contact-us">{{ __('index.Move To Blog') }}</button>
-          </a>
-        </div>
-
-      </div>
-    </section>
+  
     <!-- End Recent Blog Posts Section -->
 
   </main><!-- End #main -->
