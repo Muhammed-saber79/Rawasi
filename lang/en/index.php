@@ -177,6 +177,9 @@ return [
     'Location' => 'Location',
     'Type' => 'Type',
     'Project State' => 'Project State',
+    'Download Brochure' => 'Download Brochure',
+    'City' => 'City',
+    'Move To Location' => 'Move To Location',
 
     // Contact Page...
     'Our Address' => 'Our Address',

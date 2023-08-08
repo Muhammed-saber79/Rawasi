@@ -7,9 +7,11 @@
   <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ asset('assets/img/breadcrumbs-bg.jpg') }}');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>{{ __('index.Project Details') }}</h2>
+      <h2 class="text-center">{{ __('index.Project Details') }}</h2>
       <ol>
-      <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
+        <li>
+          <a href="{{ route('index') }}">{{ __('index.Home') }}</a>
+        </li>
         <li>{{ __('index.Project Details') }}</li>
       </ol>
 
@@ -30,8 +32,6 @@
             </div>
             @endforeach
             
-
-           
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -45,11 +45,9 @@
         <div class="col-lg-8">
           <div class="portfolio-description">
             <h2>{{$project->title}}</h2>
-            <p>
-
-              {!! $project->description!!}
+            <p style="overflow: hidden; word-wrap: break-word;">
+                {!! $project->description !!}
             </p>
-           
           </div>
         </div>
 
@@ -58,15 +56,19 @@
             <h3>{{ __('index.Project information') }}</h3>
             <ul>
               <li><strong>{{ __('index.Owner') }}</strong> <span>Private</span></li>
-              <li><strong>{{ __('index.Location') }}</strong> <span>Eastern Province</span></li>
-              <li><strong>{{ __('index.') }}Space</strong> <span>400,000 m2 approximately</span></li>
-              <li><strong>{{ __('index.Type') }}</strong> <span>Recreational, Commercial, Administrative</span></li>
-              <li><strong>{{ __('index.Project State') }}</strong> <span>Under studying</span></li>
+              <li>
+                <strong>{{ __('index.Location') }}</strong>
+                <span>{{ $project->location }}</span>
+                <span>
+                  <a href="{{ $project->gps }}">{{ __('index.Move To Location') }}</a>
+                </span>
+              </li>
+              <li><strong>{{ __('index.City') }}</strong> <span>{{ $project->city->name }}</span></li>
               <li>
                 <div class="text-center my-5 mx-auto">
-                  <hr class="w-75 m-auto my-5">
-                  <a href="{{ route('contact') }}">
-                    <button class="btn-contact-us">{{ __('index.Contact') }}</button>
+                  <hr class="m-auto my-1">
+                  <a href="{{ $project->prochure }}">
+                    <button class="btn-contact-us">{{ __('index.Download Brochure') }}</button>
                   </a>
                 </div>
               </li>

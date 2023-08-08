@@ -19,6 +19,8 @@
   <title>{{ __('index.Rawasi') }} | {{ __('index.Contact') }}</title>
   @elseif (Route::current()->uri() == App::getLocale() . '/article/{id}')
   <title>{{ __('index.Rawasi') }} | {{ __('index.Post Details') }}</title>
+  @elseif (Route::current()->uri() == App::getLocale() . '/get_project/{id}')
+  <title>{{ __('index.Rawasi') }} | {{ __('index.Project Details') }}</title>
   @endif
 
 
@@ -127,46 +129,50 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 col-sm-12 text-lg-start text-sm-start ">
+          <div class="col-sm-4  text-lg-start text-sm-start ">
             <div class="footer-info">
               <a href="{{ route('index') }}" class="logo d-flex align-items-center">
                 <img src="{{asset('assets/img/logo.png')}}" alt="Rawasi-logo" width="100">
               </a>
               <p @if(App::getLocale() != 'en'): class="text-lg-end text-sm-end" @endif >
-                {{ __('index.Riyadh') }}, {{ __('index.Saudi Arabia') }}<br><br>
-                <strong>{{ __('index.Phone:') }}</strong> 00966&nbsp;11&nbsp;238&nbsp;60&nbsp;90<br>
-                <strong>{{ __('index.Email:') }}</strong> info@rawasi-sa.com<br>
+                
               </p>
-              <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
-              </div>
+              
             </div>
           </div><!-- End footer info column-->
 
-          <div class="col-lg-4 col-md-3 col-sm-6 text-lg-center text-sm-start  footer-links">
-            <h4>{{ __('index.Useful Links') }}</h4>
+          <div class="col-sm-4 text-sm-center  footer-links">
+            <div class="social-links d-flex justify-content-center mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <!-- <h4>{{ __('index.Useful Links') }}</h4>
             <ul>
               <li><a href="{{ route('home') }}">{{ __('index.Home') }}</a></li>
               <li><a href="{{ route('about') }}">{{ __('index.About') }}</a></li>
               <li><a href="{{ route('services') }}">{{ __('index.Services') }}</a></li>
               <li><a href="#">{{ __('index.Terms of service') }}</a></li>
               <li><a href="#">{{ __('index.Privacy policy') }}</a></li>
-            </ul>
+            </ul> -->
           </div><!-- End footer links column-->
 
-          <div 
-            class="col-lg-4 col-md-3 col-sm-6 @if(App::getLocale() != 'en'): text-lg-start text-sm-start @else text-lg-end text-sm-end @endif footer-links">
-            <h4>{{ __('index.Our Services') }}</h4>
+          <div class="col-sm-4 @if(App::getLocale() != 'en'): text-lg-start text-sm-start @else text-lg-end text-sm-end @endif footer-links">
+            
+            <p @if(App::getLocale() != 'en'): class="text-lg-start text-sm-start" @endif >
+              <strong>{{ __('index.Phone:') }}</strong> 00966&nbsp;11&nbsp;238&nbsp;60&nbsp;90<br>
+              <strong>{{ __('index.Email:') }}</strong> info@rawasi-sa.com<br><br>
+              {{ __('index.Riyadh') }}, {{ __('index.Saudi Arabia') }} <br>
+            </p>
+            <!-- <h4>{{ __('index.Our Services') }}</h4>
             <ul>
               <li><a href="{{ route('services') }}">{{ __('index.Real estate marketing') }}</a></li>
               <li><a href="{{ route('services') }}">{{ __('index.Organize financing') }}</a></li>
               <li><a href="{{ route('services') }}">{{ __('index.Real estate investment and development') }}</a></li>
               <li><a href="{{ route('services') }}">{{ __('index.Studies') }}</a></li>
               <li><a href="{{ route('services') }}">{{ __('index.Facility Management Division') }}</a></li>
-            </ul>
+            </ul> -->
           </div><!-- End footer links column-->
 
         </div>

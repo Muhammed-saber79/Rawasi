@@ -133,6 +133,9 @@ return [
     'Location' => 'الموقع',
     'Type' => 'النوع',
     'Project State' => 'حالة المشروع',
+    'Download Brochure' => 'تحميل الكتيب',
+    'City' => 'المدينة',
+    'Move To Location' => 'الانتقال الى الموقع',
 
     // Contact Page...
     'Our Address' => 'عنواننا',
