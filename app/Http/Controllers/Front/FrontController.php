@@ -39,4 +39,6 @@ class FrontController extends Controller
         $images = $project->images ;
         return view('front.project-details',compact('project','images'));
     }
+
+   
 }
