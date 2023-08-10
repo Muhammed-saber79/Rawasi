@@ -18,7 +18,7 @@ return [
     'About' => 'من نحن',
     'Services' => 'الخدمات',
     'Projects' => 'المشاريع',
-    'Blog' => 'المدونة',
+    'Blog' => 'المركز الإعلامي',
     'Contact' => 'اتصل بنا',
     'Language' => 'اللغة',
     
@@ -29,7 +29,7 @@ return [
     'Get Started' => 'ابدأ الآن',
     
     // About Us...
-    'About Us' => 'معلومات عنا',
+    'About Us' =>  'من نحن',
     'Rawasi real estate is a Saudi corporation with limited responsibility, its headquarters in Riyadh. It was established in 2007 by a group of local shareholders with long experience in fields of real estate services,architecture, engineering and contracting in order to work in the field of real estate industry in its comprehensive concept. Listed below services that Rawasi is proud to provide to its clients' => 'رواسي العقارية هي شركة سعودية ذات مسؤولية محدودة مقرها العاصمة الرياض, تم تاسيسها في عام 2007م من قبل مجموعة من المساهمين المحليين من ذوي الخبرة الطويلة في مجالات الخدمات العقارية والعمارة والهندسة والمقاولات وذلك للعمل في مجال الصناعة العقارية بمفهومها الشامل.',
     'Our Vision' => 'رؤيتنا',
     'To be a major professional real estate gate in the real estate developing industry in KSA and the region.' => 'أن نكون بوابة رائدة واحترافية في صناعة التطوير العقاري وتقديم الخدمات العقارية في المملكة العربية السعودية والمنطقة.',

@@ -30,13 +30,13 @@
         <div class="row gy-4">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
+            <div class="card-item h-100">
               <div class="row">
                 {{-- <div class="col-xl-5">
                   <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
                 </div> --}}
              
-                  <div class="card-body text-center">
+                  <div class="card-body text-center h-100">
                     <h4 class="card-title">{{ __('index.Our Vision') }}</h4>
                     <p style="color: #445f79">
                     {{ __('index.To be a major professional real estate gate in the real estate developing industry in KSA and the region.') }}
@@ -48,13 +48,13 @@
           </div><!-- End Card Item -->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
+            <div class="card-item h-100">
               <div class="row">
                 {{-- <div class="col-xl-5">
                   <div class="card-bg" style="background-image: url(assets/img/constructions-3.jpg);"></div>
                 </div> --}}
                
-                  <div class="card-body text-center">
+                  <div class="card-body text-center h-100">
                     <h4 class="card-title">{{ __('index.Our Mission') }}</h4>
                     <p style="color: #445f79">
                     {{ __('index.Building a real long-term partnership with the community by producing distinguished real estate development projects according to the highest quality standards available to serve the needs of all segments.') }}
@@ -213,7 +213,7 @@
           <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center">
-            <h3>{{ __('index.Our Strategic Goals') }}</h3>
+            <h3 class="text-black">{{ __('index.Our Strategic Goals') }}</h3>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
               <i class="mx-3 fa-solid fa-hotel"></i>
