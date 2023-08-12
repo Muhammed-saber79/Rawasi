@@ -168,10 +168,10 @@
 
           <div class="col-sm-4 text-sm-center  footer-links">
             <div class="social-links d-flex justify-content-center mt-3">
-              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-youtube"></i></a>
-              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/rawasi_ksa?s=21&t=GjS4oYgOowed4nNjDk115A" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="https://youtube.com/@Rawasi_ksa" class="d-flex align-items-center justify-content-center"><i class="bi bi-youtube"></i></a>
+              <a href="https://instagram.com/rawasi_ksa?igshid=MzRlODBiNWFlZA==" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/%D8%B4%D8%B1%D9%83%D8%A9-%D8%B1%D9%88%D8%A7%D8%B3%D9%8A-%D8%A7%D9%84%D9%85%D8%AA%D9%82%D8%AF%D9%85%D8%A9/" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
             </div>
             <!-- <h4>{{ __('index.Useful Links') }}</h4>
             <ul>

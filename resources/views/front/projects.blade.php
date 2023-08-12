@@ -26,12 +26,12 @@
 
       <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
 
-        <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+        <!-- <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">{{ __('index.All') }}</li>
           @foreach($cities as $city)
             <li data-filter=".filter-{{ $city->name }}">{{ $city->name }}</li>
           @endforeach
-        </ul><!-- End Projects Filters -->
+        </ul>End Projects Filters -->
         
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
