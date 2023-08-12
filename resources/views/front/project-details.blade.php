@@ -28,7 +28,7 @@
 
             @foreach ($images  as $image)
             <div class="swiper-slide">
-              <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$image->image)}}" alt="">
+              <img style="height: 80vh;" src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$image->image)}}" alt="">
             </div>
             @endforeach
             

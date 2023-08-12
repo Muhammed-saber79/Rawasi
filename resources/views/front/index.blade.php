@@ -6,7 +6,7 @@
     <div id="hero-carousel">
 
       <!-- Video -->
-      <video id="intro-video" controls="false" poster playsinline autoplay loop muted>
+      <video id="intro-video" poster autoplay loop muted plays-inline>
         <source src="assets/video/intro.mp4" type="video/mp4">
       </video>
 
@@ -301,11 +301,7 @@
         </a>
       </div> --}}
     </section><!-- End Our Projects Section -->
-
-    <!-- ======= Recent Blog Posts Section ======= -->
   
-    <!-- End Recent Blog Posts Section -->
-
   </main><!-- End #main -->
 
 @endsection

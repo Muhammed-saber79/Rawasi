@@ -23,7 +23,6 @@
   <title>{{ __('index.Rawasi') }} | {{ __('index.Project Details') }}</title>
   @endif
 
-
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -63,8 +62,9 @@
 
     #intro-video {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       object-fit: cover;
+      display: none;
     }
 
     #intro-video::-webkit-media-controls-panel {
@@ -77,8 +77,33 @@
         display: none !important;
     }
 
+    /* @media (min-aspect-ratio: 16/9) {
+      #intro-video{
+        width: 100%;
+        height: auto;
+      }
+    }
 
+    @media (max-aspect-ratio: 16/9) {
+      #intro-video{
+        width: auto;
+        height: 100%;
+      }
+    } */
   </style>
+
+  <script>
+     
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('intro-video');
+        
+        video.addEventListener('canplaythrough', function() {
+          video.style.display = 'flex';
+          video.play();
+        });
+      });
+
+  </script>
 </head>
 
 <body>
@@ -216,6 +241,7 @@
       languageDropdown.addEventListener('click', () => {
           languageSubMenu.classList.toggle('show-language-dropdown');
       });
+
   </script>
 
 </body>
