@@ -55,21 +55,29 @@
   @endif
 
   <style>
+
     #hero, #hero-carousel {
-      width: 100%;
-      height: 100vh; /* Adjust the height as needed */
+        width: 100%;
+    }
+    @media (min-width: 1920px) {
+        /* For screens wider than 1701px, apply object-fit: cover */
+        #intro-video {
+            object-fit: cover;
+            height: 92vh;
+            width: 100%;
+        }
     }
 
-    #intro-video {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      display: none;
+    @media (max-width: 1700px) {
+        /* For screens up to 1700px wide, take full width */
+        #intro-video {
+            width: 100%;
+        }
     }
 
     #intro-video::-webkit-media-controls-panel {
     display: none !important;
-    }
+}
     #intro-video::-webkit-media-controls-play-button {
         display: none !important;
     }
@@ -91,19 +99,6 @@
       }
     } */
   </style>
-
-  <script>
-     
-      document.addEventListener('DOMContentLoaded', function() {
-        const video = document.getElementById('intro-video');
-        
-        video.addEventListener('canplaythrough', function() {
-          video.style.display = 'flex';
-          video.play();
-        });
-      });
-
-  </script>
 </head>
 
 <body>
@@ -241,6 +236,19 @@
       languageDropdown.addEventListener('click', () => {
           languageSubMenu.classList.toggle('show-language-dropdown');
       });
+
+  </script>
+
+  <script>
+      
+      // document.addEventListener('DOMContentLoaded', function() {
+      //   const video = document.getElementById('intro-video');
+        
+      //   video.addEventListener('canplaythrough', function() {
+      //     video.style.display = 'flex';
+      //     video.play();
+      //   });
+      // });
 
   </script>
 

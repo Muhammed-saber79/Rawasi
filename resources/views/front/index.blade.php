@@ -6,7 +6,7 @@
     <div id="hero-carousel">
 
       <!-- Video -->
-      <video id="intro-video" poster autoplay loop muted plays-inline>
+      <video id="intro-video" poster loop playsinline autoplay>
         <source src="assets/video/intro.mp4" type="video/mp4">
       </video>
 
