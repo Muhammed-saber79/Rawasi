@@ -54,9 +54,12 @@
     <link href="{{asset('assets/css/main-ar.css')}}" rel="stylesheet">
   @endif
 
+  <link rel="prefetch" href="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4">
+
   <style>
 
     #hero, #hero-carousel {
+        position: relative;
         width: 100%;
     }
     @media (min-width: 1920px) {
@@ -66,6 +69,11 @@
             height: 92vh;
             width: 100%;
         }
+
+        #hero, #hero-carousel {
+            position: relative;
+            width: 100%;
+        }
     }
 
     @media (max-width: 1700px) {
@@ -73,11 +81,16 @@
         #intro-video {
             width: 100%;
         }
+
+        #hero, #hero-carousel {
+            position: relative;
+            width: 100%;
+        }
     }
 
     #intro-video::-webkit-media-controls-panel {
-    display: none !important;
-}
+        display: none !important;
+    }
     #intro-video::-webkit-media-controls-play-button {
         display: none !important;
     }
@@ -85,19 +98,16 @@
         display: none !important;
     }
 
-    /* @media (min-aspect-ratio: 16/9) {
-      #intro-video{
-        width: 100%;
-        height: auto;
-      }
-    }
+    /* After video modifications */
 
-    @media (max-aspect-ratio: 16/9) {
-      #intro-video{
-        width: auto;
-        height: 100%;
-      }
-    } */
+    #btn {
+      position: absolute;
+      bottom: 2vh;
+      left: 2vw;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -236,19 +246,6 @@
       languageDropdown.addEventListener('click', () => {
           languageSubMenu.classList.toggle('show-language-dropdown');
       });
-
-  </script>
-
-  <script>
-      
-      // document.addEventListener('DOMContentLoaded', function() {
-      //   const video = document.getElementById('intro-video');
-        
-      //   video.addEventListener('canplaythrough', function() {
-      //     video.style.display = 'flex';
-      //     video.play();
-      //   });
-      // });
 
   </script>
 

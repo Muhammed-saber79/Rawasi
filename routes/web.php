@@ -60,7 +60,7 @@ Route::group(
             $articles = Article::latest()->take(3)->get();
 
             return view('front.index', compact('projects', 'articles'));
-        })->name('index');
+        })->middleware('cache_response')->name('index');
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -3,12 +3,39 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-block">
 
-    <div id="hero-carousel">
+    <div id="hero-carousel" class="video-container">
 
-      <!-- Video -->
-      <video id="intro-video" poster loop playsinline autoplay>
-        <source src="assets/video/intro.mp4" type="video/mp4">
+      <!-- <div class="vadoo_player" vid="S6Wy8VOgwT6iiLIkqXOIJyMYz5Gve7n8" etype="responsive"></div><script src="https://api.vadoo.tv/static/vadoo_player.min.js" id="player_script" vid="S6Wy8VOgwT6iiLIkqXOIJyMYz5Gve7n8"></script>
+       -->
+
+
+      <video id="intro-video" poster loop playsinline preload="auto" autoplay muted>
+        <source src="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4" type="video/mp4">
       </video>
+      
+      <button id="btn" onclick="toggleSound()">
+        <img src="assets/img/muted.png" width="50px" alt="" id='vol_img'>
+      </button>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("intro-video");
+            video.play();
+        });
+
+        let toggleSound = function() {
+          var video = document.getElementById("intro-video");
+          let image = document.getElementById('vol_img');
+          
+          if (video.muted) {
+            video.muted = false; // Unmute sound
+            image.src = "assets/img/unmuted.png";
+          } else {
+            video.muted = true; // Mute sound
+            image.src = "assets/img/muted.png";
+          }
+        };
+      </script>
 
     </div>
 
