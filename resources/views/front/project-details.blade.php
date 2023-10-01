@@ -67,9 +67,9 @@
               <li>
                 <div class="text-center my-5 mx-auto">
                   <hr class="m-auto my-1">
-                  <a href="{{ $project->prochure }}">
-                    <button class="btn-contact-us">{{ __('index.Download Brochure') }}</button>
-                  </a>
+                  
+                    <a href="{{asset('images/'.$project->getTranslation('title','en').'/'.$project->prochure)}}" target="_blank" class="btn-contact-us">{{ __('index.Download Brochure') }}</a>
+                 
                 </div>
               </li>
             </ul>

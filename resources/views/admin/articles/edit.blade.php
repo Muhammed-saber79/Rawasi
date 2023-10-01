@@ -65,7 +65,13 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label for="field4"> تفاصيل المقال باللغة العربية </label>
-                      <textarea type="text" name="description_ar" class="form-control" id="field4">{{$article->getTranslation('description', 'ar')}}</textarea>
+                      <div class="card-body pad">
+                        <div class="mb-3">
+                          <textarea class="textarea" name="description_ar" placeholder="Place some text here"
+                                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$article->getTranslation('description', 'ar')}}</textarea>
+                        </div>
+                       
+                      </div> 
                     </div>
                    
                   </div>
@@ -74,7 +80,13 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label for="field4"> تفاصيل المقال باللغة الانجليزية</label>
-                      <textarea type="text"  name="description_en" class="form-control" id="field4">{{$article->getTranslation('description', 'en')}}</textarea>
+                     <div class="card-body pad">
+                        <div class="mb-3">
+                          <textarea class="textarea" name="description_en" placeholder="Place some text here"
+                                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$article->getTranslation('description', 'en')}}</textarea>
+                        </div>
+                       
+                      </div>           
                     </div>
                    
                   </div>

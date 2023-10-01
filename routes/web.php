@@ -47,6 +47,15 @@ Route::group(
             Route::get('comment_delete/{id}',[CommentController::class,'destroy'])->name('comment_delete');
         });
 
+
+
+
+
+
+
+
+
+
         Route::group([
             'prefix' => 'admin'
         ], function () {
@@ -81,6 +90,7 @@ Route::group(
 
         Route::get('/projects', [FrontController::class,'projects'])->name('projects');
         Route::get('get_project/{id}',[FrontController::class ,'get_project'])->name('get_project');
+        Route::get('download/{id}',[FrontController::class,'download_pdf'])->name('download_pdf');
     }
 );
 
