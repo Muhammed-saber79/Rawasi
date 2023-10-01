@@ -54,7 +54,8 @@
     <link href="{{asset('assets/css/main-ar.css')}}" rel="stylesheet">
   @endif
 
-  <link rel="prefetch" href="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4">
+  <!-- <link rel="prefetch" href="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4"> -->
+  <!-- <link rel="prefetch" href="{{ asset('storage/intro.mp4') }}"> -->
 
   <style>
 
