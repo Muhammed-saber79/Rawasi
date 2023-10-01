@@ -244,11 +244,13 @@ section {
 --------------------------------------------------------------*/
 .header {
   z-index: 997;
-  position: absolute;
-  padding: 30px 0;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
+  padding: 30px 0;
   left: 0;
   right: 0;
+  background-color: #f5f6f7;
 }
 
 /* .header .logo img {
@@ -300,8 +302,8 @@ section {
     justify-content: space-between;
     padding: 0 3px;
     font-family: var(--font-primary);
-    font-size: 14px;
-    font-weight: var(--font-primary-weight);
+    font-size: 17px;
+    font-weight: bold;
     color: var(--color-primary);
     text-transform: uppercase;
     white-space: nowrap;
@@ -674,7 +676,16 @@ section {
   border: 1px solid rgba(82, 86, 94, 0.2);
   background: #fff;
   position: relative;
-  border-radius: 0;
+  border-radius: 15px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-index .card-item:hover {
+  background: #f5f6f7;
+  cursor: pointer;
+  color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-index .card-item .card-bg {
@@ -705,15 +716,30 @@ section {
 --------------------------------------------------------------*/
 .services .service-item {
   padding: 40px;
-  background: #fff;
+  background: #f5f6f7;
   height: 100%;
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Add transitions for background and box-shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Customize the box shadow as needed */
+  text-align: center;
+  border-radius: 15px;
 }
+
+.services .service-item:hover {
+  background: #fff;
+  cursor: pointer;
+  color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .services .service-item .icon {
   width: 48px;
   height: 48px;
   position: relative;
   margin-bottom: 50px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .services .service-item .icon i {
@@ -1690,7 +1716,23 @@ section {
   transition: 0.5s;
 }
 
-.recent-blog-posts .post-item .post-date {
+.recent-blog-posts .post-item-home {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recent-blog-posts .post-item-home .post-img img {
+  height: 310px;
+  transition: 0.5s;
+}
+
+.recent-blog-posts .post-item .post-date,
+.recent-blog-posts .post-item-home .post-date
+{
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1702,11 +1744,15 @@ section {
   font-weight: 500;
 }
 
-.recent-blog-posts .post-item .post-content {
+.recent-blog-posts .post-item .post-content,
+.recent-blog-posts .post-item-home .post-content
+{
   padding: 30px;
 }
 
-.recent-blog-posts .post-item .post-title {
+.recent-blog-posts .post-item .post-title,
+.recent-blog-posts .post-item-home .post-title
+{
   font-size: 24px;
   color: var(--color-secondary);
   font-weight: 700;
@@ -1714,22 +1760,26 @@ section {
   margin-bottom: 15px;
 }
 
-.recent-blog-posts .post-item .meta i {
+.recent-blog-posts .post-item .meta i,
+.recent-blog-posts .post-item-home .meta i {
   font-size: 16px;
   color: var(--color-primary);
 }
 
-.recent-blog-posts .post-item .meta span {
+.recent-blog-posts .post-item .meta span,
+.recent-blog-posts .post-item-home .meta span {
   font-size: 15px;
   color: #838893;
 }
 
-.recent-blog-posts .post-item hr {
+.recent-blog-posts .post-item hr,
+.recent-blog-posts .post-item-home hr {
   color: #888;
   margin: 20px 0;
 }
 
-.recent-blog-posts .post-item .readmore {
+.recent-blog-posts .post-item .readmore,
+.recent-blog-posts .post-item-home .readmore {
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -1738,18 +1788,24 @@ section {
   color: #838893;
 }
 
-.recent-blog-posts .post-item .readmore i {
+.recent-blog-posts .post-item .readmore i,
+.recent-blog-posts .post-item-home .readmore i {
   line-height: 0;
   margin-left: 6px;
   font-size: 16px;
 }
 
 .recent-blog-posts .post-item:hover .post-title,
-.recent-blog-posts .post-item:hover .readmore {
+.recent-blog-posts .post-item:hover .readmore,
+.recent-blog-posts .post-item-home:hover .post-title,
+.recent-blog-posts .post-item-home:hover .readmore
+{
   color: var(--color-primary);
 }
 
-.recent-blog-posts .post-item:hover .post-img img {
+.recent-blog-posts .post-item:hover .post-img img,
+.recent-blog-posts .post-item-home:hover .post-img img
+{
   transform: scale(1.1);
 }
 

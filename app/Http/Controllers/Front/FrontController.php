@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Models\City;
 use App\Models\Article;
 use App\Models\Comment;
+use App\Models\Partner;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -40,5 +41,9 @@ class FrontController extends Controller
         return view('front.project-details',compact('project','images'));
     }
 
-   
+    public function partners ()
+    {
+        $partners = Partner::all();
+        return view('front.partners', compact('partners'));
+    }
 }

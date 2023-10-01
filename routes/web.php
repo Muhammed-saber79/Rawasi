@@ -69,7 +69,7 @@ Route::group(
             $articles = Article::latest()->take(3)->get();
 
             return view('front.index', compact('projects', 'articles'));
-        })->middleware('cache_response')->name('index');
+        })->name('index');  //->middleware('cache_response')->name('index');
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -91,6 +91,8 @@ Route::group(
         Route::get('/projects', [FrontController::class,'projects'])->name('projects');
         Route::get('get_project/{id}',[FrontController::class ,'get_project'])->name('get_project');
         Route::get('download/{id}',[FrontController::class,'download_pdf'])->name('download_pdf');
+
+        Route::get('/partners', [FrontController::class, 'partners'])->name('partners');
     }
 );
 

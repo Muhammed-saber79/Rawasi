@@ -17,7 +17,7 @@ return [
     'Home' => 'الرئيسية',
     'About' => 'من نحن',
     'Services' => 'الخدمات',
-    'Projects' => 'المشاريع',
+    'Projects' => 'مشاريعنا',
     'Blog' => 'المركز الإعلامي',
     'Contact' => 'اتصل بنا',
     'Language' => 'اللغة',
@@ -45,7 +45,7 @@ return [
     'Studies' => 'الدراسات',
     'Facility Management Division' => ' إدارة المرافق',
     'Create and manage real estate portfolios and private endowments' => 'إنشاء وإدارة المحافظ العقارية والأوقاف الخاصة',
-    'Learn more' => 'تعلم المزيد ',
+    'Learn more' => 'للمزيد',
 
     // Our Strategic Goals...
     'Our Strategic Goals' => 'أهدافنا الاستراتيجية',
@@ -64,8 +64,8 @@ return [
     'More Projects' => 'مزيد من المشاريع',
 
     // Testimonials...
-    'Testimonials' => 'شهادات العملاء',
-    'Client Testimonials: Inspiring Stories from Our Customers' => 'شهادات العملاء: قصص ملهمة من عملائنا',
+    'Partners' => 'شركاؤنا',
+    'Partners-Text' => 'استكشف شراكاتنا الموثوقة في صناعة العقارات، حيث نعرض إرثًا من التفوق والابتكار.',
     
     // Recent Blog Posts...
     'Recent Blog Posts' => 'المقالات الحديثة',
@@ -153,6 +153,7 @@ return [
     'Blog Posts' => 'المقالات الحديثة',
     'Blog-Text' => 'اكتشف أخر التحديثات والمقالات الشيقة والمفيدة التي تغطي مواضيع مختلفة، وتقدم نصائح قيمة ومعلومات مفصلة لتبقى على اطلاع دائم بكل ما هو جديد في عالم العقارات.',
     'Featured Posts' => 'مقالات مميزة',
+    'Move To Blog' => 'الإنتقال إلى المدونة',
 
     // Blog Post Details...
     'Post Details' => 'تفاصيل المقال',

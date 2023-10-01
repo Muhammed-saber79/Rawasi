@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('content')
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-block">
+  <section id="hero" class="d-block" style="padding:0 0;">
 
     <div id="hero-carousel" class="video-container">
 
@@ -10,7 +10,8 @@
 
 
       <video id="intro-video" poster loop playsinline preload="auto" autoplay muted>
-        <source src="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4" type="video/mp4">
+        <!-- <source src="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4" type="video/mp4"> -->
+        <source src="{{ asset('storage/intro.mp4') }}" type="video/mp4">
       </video>
       
       <button id="btn" onclick="toggleSound()">
@@ -109,123 +110,135 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-building"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-building"></i>
+                  </div>
+                  <h3>{{ __('index.Real estate investment and development') }}</h3>
                 </div>
-                <h3>{{ __('index.Real estate investment and development') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-people-group"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-people-group"></i>
+                  </div>
+                  <h3>{{ __('index.Real estate marketing') }}</h3>
                 </div>
-                <h3>{{ __('index.Real estate marketing') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-coins"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-coins"></i>
+                  </div>
+                  <h3>{{ __('index.Organize financing') }}</h3>
                 </div>
-                <h3>{{ __('index.Organize financing') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-compass-drafting"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                  </div>
+                  <h3>{{ __('index.Studies') }}</h3>
                 </div>
-                <h3>{{ __('index.Studies') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-calendar-days"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <h3>{{ __('index.Facility Management Division') }}</h3>
                 </div>
-                <h3>{{ __('index.Facility Management Division') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
-              <div>
-                <div class="icon">
-                  <i class="fa-solid fa-landmark"></i>
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-landmark"></i>
+                  </div>
+                  <h3>{{ __('index.Create and manage real estate portfolios and private endowments') }}</h3>
                 </div>
-                <h3>{{ __('index.Create and manage real estate portfolios and private endowments') }}</h3>
-              </div>
 
-              <div>
-                <hr>
-                <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                </a>
-              </div>
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
 
-            </div>
+              </div>
+            </a>
           </div><!-- End Service Item -->
 
         </div>
@@ -328,6 +341,67 @@
         </a>
       </div> --}}
     </section><!-- End Our Projects Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up">
+
+        <div class=" section-header">
+          <h2>{{ __('index.Blog Posts') }}</h2>
+          <p>
+            {{ __('index.Blog-Text') }}
+          </p>
+        </div>
+
+        <div class="row gy-5">
+
+          @foreach($articles as $article)
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="post-item-home position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{{asset('images/'.$article->getTranslation('title','en').'/'.$article->image)}}" class="img-fluid" alt="">
+                <span class="post-date">{{Carbon\Carbon::parse($article->created_at)->format('d M Y')}}</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">{{$article->title}}</h3>
+
+                {{-- <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">جوليا باركر</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">نصائح المشترين</span>
+                  </div>
+                </div> --}}
+
+                <hr>
+
+                <a href="{{ route('get_article', $article) }}" class="readmore stretched-link">
+                  <span>{{ __('index.Learn more') }}</span>
+                  <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div><!-- End post item -->
+          @endforeach
+
+        </div>
+
+        <div class="text-center mt-5 mx-auto">
+          <a href="{{ route('articles') }}">
+            <button class="btn-contact-us">{{ __('index.Move To Blog') }}</button>
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section -->
   
   </main><!-- End #main -->
 

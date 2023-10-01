@@ -21,6 +21,8 @@
   <title>{{ __('index.Rawasi') }} | {{ __('index.Post Details') }}</title>
   @elseif (Route::current()->uri() == App::getLocale() . '/get_project/{id}')
   <title>{{ __('index.Rawasi') }} | {{ __('index.Project Details') }}</title>
+  @elseif (Route::current()->uri() == App::getLocale() . '/partners')
+  <title>{{ __('index.Rawasi') }} | {{ __('index.Partners') }}</title>
   @endif
 
   <meta content="" name="description">
@@ -63,11 +65,11 @@
         position: relative;
         width: 100%;
     }
-    @media (min-width: 1920px) {
+    @media (min-width: 1800px) {
         /* For screens wider than 1701px, apply object-fit: cover */
         #intro-video {
             object-fit: cover;
-            height: 92vh;
+            height: 91vh;
             width: 100%;
         }
 
@@ -77,7 +79,21 @@
         }
     }
 
-    @media (max-width: 1700px) {
+    @media (min-width: 1600px) {
+        /* For screens up to 1700px wide, take full width */
+        #intro-video {
+            object-fit: cover;
+            height: 91vh;
+            width: 100%;
+        }
+
+        #hero, #hero-carousel {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1600px) {
         /* For screens up to 1700px wide, take full width */
         #intro-video {
             width: 100%;
@@ -115,7 +131,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center" style="height: 5rem;">
+  <header id="header" class="header secion-bg d-flex align-items-center" style="height: 5rem;">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between text-danger" style="height: 5rem;">
 
@@ -130,7 +146,28 @@
           <li><a class="{{ Route::current()->uri() == App::getLocale() ? 'active' : '' }}" href="{{url('/')}}">{{ __('index.Home') }}</a></li>
           {{-- <li><a class="{{ Route::current()->uri() == App::getLocale() . '/about' ? 'active' : '' }}" href="{{route('about')}}">{{ __('index.About') }}</a></li> --}}
           <li><a class="{{ Route::current()->uri() == App::getLocale() . '/services' ? 'active' : '' }}" href="{{route('services')}}">{{ __('index.Services') }}</a></li>
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/projects' ? 'active' : '' }}" href="{{route('projects')}}">{{ __('index.Projects') }}</a></li>
+          
+          <li class="dropdown">
+            <a href="#"><span>{{ __('index.Projects') }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+                <?php
+                  $projects = App\Models\Project::latest()->take(3)->get();
+                ?>
+                @foreach($projects as $project)
+                    <li>
+                        <a rel="alternate" href="{{ route('get_project', $project->id) }}">
+                            {{ $project->title }}
+                        </a>
+                    </li>
+                @endforeach
+                <li>
+                    <a rel="alternate" href="{{ route('projects') }}">
+                        {{ __('index.More Projects') }}
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/partners' ? 'active' : '' }}" href="{{route('partners')}}">{{ __('index.Partners') }}</a></li> 
           <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ? 'active' : '' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
           <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ? 'active' : '' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
           <li class="dropdown">

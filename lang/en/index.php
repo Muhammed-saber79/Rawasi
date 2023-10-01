@@ -64,8 +64,8 @@ return [
     'More Projects' => 'More Projects',
 
     // Testimonials...
-    'Testimonials' => 'Testimonials',
-    'Client Testimonials: Inspiring Stories from Our Customers' => 'Client Testimonials: Inspiring Stories from Our Customers',
+    'Partners' => 'Partners',
+    'Partners-Text' => 'Explore our trusted partnerships in the real estate industry, showcasing a legacy of excellence and innovation.',
     
     // Recent Blog Posts...
     'Recent Blog Posts' => 'Recent Blog Posts',
