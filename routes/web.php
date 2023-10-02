@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ProjectController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -45,6 +46,10 @@ Route::group(
             Route::get('delete_project_image/{id}',[ProjectController::class,'delete_project_image'])->name('delete_project_image');
             Route::get('accept_comment/{id}',[CommentController::class,'accept_comment'])->name('accept_comment');
             Route::get('comment_delete/{id}',[CommentController::class,'destroy'])->name('comment_delete');
+        
+            Route::get('partners', [PartnerController::class, 'index'])->name('partners.index');
+            Route::post('partners', [PartnerController::class, 'store'])->name('partners.add');
+            Route::delete('partners/{id}', [PartnerController::class, 'destroy'])->name('partners.delete');
         });
 
 

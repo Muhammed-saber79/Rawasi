@@ -727,7 +727,7 @@ section {
 .services .service-item:hover {
   background: #fff;
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -765,7 +765,7 @@ section {
 }
 
 .services .service-item h3 {
-  color: var(--color-default);
+  /* color: var(--color-default); */
   font-weight: 700;
   margin: 0 0 20px 0;
   padding-bottom: 8px;
@@ -2798,4 +2798,42 @@ section {
   background-image: linear-gradient(90deg, #91c9c8 , #73abd4, #445f79);
   color: #fff;
   transition: color 0.03s ease;
+}
+
+/* Partners Styles */
+.partner-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.partner-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100);
+  transition: .3;
+}
+
+.partner-item img:hover {
+  filter: none;
+  transform: scale(1.1);
+  cursor: pointer;
+} 
+
+.partner-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.partner-item:hover::before {
+  opacity: 0;
+  filter: none;
 }

@@ -112,20 +112,28 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <a href="{{ route('services') }}">
               <div class="service-item  position-relative  d-flex flex-column justify-content-between">
-              
+
                 <div>
                   <div class="icon">
-                    <i class="fa-solid fa-building"></i>
+                    <i class="fa-solid fa-money-bill"></i> <!-- Use fa-money-bill icon for Real estate investment -->
                   </div>
-                  <h3>{{ __('index.Real estate investment and development') }}</h3>
+                  <h3>{{ __('index.Real estate investment') }}</h3>
                 </div>
 
-                <!-- <div>
-                  <hr>
-                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                  </a>
-                </div> -->
+              </div>
+            </a>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-hammer"></i> <!-- Use fa-hammer icon for Real estate development -->
+                  </div>
+                  <h3>{{ __('index.Real estate development') }}</h3>
+                </div>
 
               </div>
             </a>
@@ -153,6 +161,28 @@
             </a>
           </div><!-- End Service Item -->
 
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+              
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <h3>{{ __('index.Asset Management') }}</h3>
+                </div>
+
+                <!-- <div>
+                  <hr>
+                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
+                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
+                  </a>
+                </div> -->
+
+              </div>
+            </a>
+          </div><!-- End Service Item -->
+
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <a href="{{ route('services') }}">
               <div class="service-item  position-relative  d-flex flex-column justify-content-between">
@@ -161,7 +191,7 @@
                   <div class="icon">
                     <i class="fa-solid fa-coins"></i>
                   </div>
-                  <h3>{{ __('index.Organize financing') }}</h3>
+                  <h3>{{ __('index.Fund Management') }}</h3>
                 </div>
 
                 <!-- <div>
@@ -197,29 +227,23 @@
             </a>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <a href="{{ route('services') }}">
               <div class="service-item  position-relative  d-flex flex-column justify-content-between">
-              
+
                 <div>
                   <div class="icon">
-                    <i class="fa-solid fa-calendar-days"></i>
+                    <i class="fa-solid fa-cogs"></i>
                   </div>
-                  <h3>{{ __('index.Facility Management Division') }}</h3>
+                  <h3>{{ __('index.Facility Management') }}</h3>
                 </div>
-
-                <!-- <div>
-                  <hr>
-                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                  </a>
-                </div> -->
 
               </div>
             </a>
-          </div><!-- End Service Item -->
+          </div> -->
+          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <a href="{{ route('services') }}">
               <div class="service-item  position-relative  d-flex flex-column justify-content-between">
               
@@ -230,18 +254,51 @@
                   <h3>{{ __('index.Create and manage real estate portfolios and private endowments') }}</h3>
                 </div>
 
-                <!-- <div>
-                  <hr>
-                  <a href="{{ route('services') }}" class="readmore stretched-link">{{ __('index.Learn more') }} 
-                    <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
-                  </a>
-                </div> -->
+              </div>
+            </a>
+          </div> -->
+          <!-- End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-tasks"></i>
+                  </div>
+                  <h3>{{ __('index.Project Management') }}</h3>
+                </div>
 
               </div>
             </a>
-          </div><!-- End Service Item -->
+          </div> -->
+          <!-- End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="300">
+            <a href="{{ route('services') }}">
+              <div class="service-item  position-relative  d-flex flex-column justify-content-between">
+
+                <div>
+                  <div class="icon">
+                    <i class="fa-solid fa-home"></i>
+                  </div>
+                  <h3>{{ __('index.Real Estate Mediation') }}</h3>
+                </div>
+
+              </div>
+            </a>
+          </div> -->
+          <!-- End Service Item -->
 
         </div>
+
+        <div class="text-center mt-5 mx-auto">
+          <a href="{{ route('services') }}">
+            <button class="btn-contact-us">{{ __('index.And More Services') }}</button>
+          </a>
+        </div>
+
       </div>
     </section><!-- End Services Section -->
 
@@ -381,7 +438,7 @@
                 <hr>
 
                 <a href="{{ route('get_article', $article) }}" class="readmore stretched-link">
-                  <span>{{ __('index.Learn more') }}</span>
+                  <span>{{ __('index.Read More') }}</span>
                   <i class="bi @if(App::getLocale()=='en'): bi-arrow-right @else bi-arrow-left @endif"></i>
                 </a>
 

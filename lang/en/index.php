@@ -39,13 +39,17 @@ return [
     // Our Services...
     'Services' => 'Services',
     'Our Outstanding Services: Quality and Professionalism in Every Real Estate Aspect' => 'Our Outstanding Services: Quality and Professionalism in Every Real Estate Aspect',
-    'Real estate investment and development' => 'Real estate investment and development',
+    'Real estate investment' => 'Real estate investment',
+    'Real estate development' => 'Real estate development',
     'Real estate marketing' => 'Real estate marketing',
-    'Organize financing' => 'Organize financing',
+    'Asset Management' => 'Asset Management',
+    'Fund Management' => 'Fund Management',
     'Studies' => 'Studies',
-    'Facility Management Division' => 'Facility Management Division',
+    'Facility Management' => 'Facility Management',
     'Create and manage real estate portfolios and private endowments' => 'Create and manage real estate portfolios and private endowments',
-    'Learn more' => 'Learn more',
+    'Project Management' => 'Project Management',
+    'Real Estate Mediation' => 'Real Estate Mediation',
+    'And More Services' => 'And More Services',
 
     // Our Strategic Goals...
     'Our Strategic Goals' => 'Our Strategic Goals',
@@ -113,56 +117,51 @@ return [
     
     // Services Details...
     'service-1'=> 
-    'We are looking forward to ideas that goes beyond what
-    is familiar through obtaining real estate investment
-    opportunities and develop chosen real estate (new,
-    renovation, infrastructure) and then re-sell it or put it
-    for investment whether it was commercial, residential or
-    industrial field.',
+    'Behind our projects and investments stand creative minds that, over the past decade, have innovated an attractive lifestyle for all. They have turned them into inspiring ideas we are proud of through consulting services related to local and regional investment opportunities, helping our clients make informed decisions.',
 
     'service-2' => 
-    'Creative minds stand behind our projects and investments
-    that have contributed over a decade in creating an
-    attractive lifestyle for everyone and making it inspiring
-    ideas that we are proud of through the members of the
-    Real Estate Marketing Department, one of the most
-    important parts of various real estate activities, whether
-    in the commercial, residential or industrial fields. We
-    market all these properties using the latest smart tools to
-    reach the largest number of people in them.',
+    'We look forward to ideas that go beyond the conventional by seizing investment real estate opportunities and developing selected properties (new construction, renovation, infrastructure) and then reintroducing them for sale or investment, whether in the commercial, residential, or industrial sector, through the construction of superstructures for all types of buildings (residential, office, industrial) or by developing the infrastructure of raw lands.',
 
     'service-3' =>
-    'Bring financial solutions suitable for clients through a partnership with a number
-    of funding sides that are based on long term relations and the large commitments
-    of clients are one of our main concerns we can provide and choose the suitable
-    for the client according to his specific requirements.',
+    'Behind our projects and investments are creative minds that, over the past decade, have contributed to innovating an attractive lifestyle for everyone, turning them into inspiring ideas we take pride in through our Real Estate Marketing Management team, one of the essential branches of real estate services for various property activities, whether in the commercial, residential, or industrial sectors. We market these properties using the latest smart tools to reach the largest possible audience and establish ongoing relationships with our loyal customers.',
 
-    'service-4' =>
-    'Provide distinct products through our advisors we can provides suitable studies
-    wich ranges between studies to know the best usage or that relies upon market
-    survey studies. Our continued watching of market allow us to better understand
-    it, and continued knowledge of the rapid changes that are happening in it,
-    to evaluate the size and rate of supply and demand and to know the size of
-    available opportunities',
+    'service-4' => 'Through property and asset management, we aim to maintain them at full occupancy with carefully selected tenants, following agreed-upon operational guidelines and plans to ensure regular returns. This is achieved through technical and administrative monitoring, collection tasks, and the development of administrative plans and programs for regular maintenance. This includes:
+
+        <ol style="margin-top: 15px">
+            <li>Residential property management.</li>
+            <li>Commercial property management.</li>
+            <li>Industrial property management.</li>
+            <li>Leasing services and alternatives.</li>
+        </ol>',
 
     'service-5' =>
-    'The Facility Management Division provides Services include maintenance,
-    security, inspection (health, safety, fire), landscaping, janitorial and pest
-    control. The division has grown over the years to keep up with business
-    growth and the increasing demand. It consists of professionally managed
-    multiple maintenance teams that are highly skilled and qualified to
-    perform the required services.',
+    'We provide suitable financial solutions for our clients through partnerships with several financial institutions, relying on long-term relationships and the significant commitments of our clients at the forefront of our priorities. We can secure and select the appropriate solutions for the client according to their specific requirements.',
 
     'service-6' =>
-    'Inventory of property and real estate assets, and private endowments
-    and the formation of a balanced portfolio of risks in order to manage
-    it and achieve the desired return from the growth of the portfolio and
-    the continuity of cash flows and exit and alternative plans for the exited
-    properties in order to enhance the value of the portfolio and create a
-    distinctive service in the real estate market to manage those portfolios
-    resulting from inheritances or owned by persons They have no interest
-    in real estate activity and its services.',
+    '<ul>
+    <li style="margin-bottom: 15px">We offer outstanding products and provide appropriate studies, ranging from studies on best use to those based on market research surveys.</li>
+    <li>Our monitoring of the real estate market allows us to better understand and continuously track the rapid changes occurring within it, assess the supply and demand rates, and identify the available opportunities.</li>
+    </ul>',
 
+    'service-7' => '
+    The Facilities Management department offers services that include maintenance, security, inspections (health, safety, and fire), landscaping, guards, and pest control. The department has grown over the years to keep pace with business growth and increasing demand, consisting of multiple maintenance teams managed professionally and characterized by high skills and qualifications to perform the required services.
+    ',
+
+    'service-8' => '
+    We offer our clients property portfolio management services in accordance with global standards. Our services include comprehensive management, strategic planning, budgeting, business operations, policies, procedures, and operational guidelines development, along with the preparation of information technology systems.
+    ',
+
+    'service-9' => '
+    <ul>
+    <li style="margin-bottom: 15px">The company provides project management services, which are a fundamental pillar in achieving positive returns for all company projects. These services include the appointment of consultancy service providers and their direct management to ensure quality in design and project execution supervision.</li>
+    <li>The Project Management sector handles cost engineering, construction application analysis, and value engineering to ensure the delivery of high-quality technical and managerial services in accordance with the highest global standards.</li>
+    </ul>
+    ',
+
+    'service-10' => '
+    Through this service, we aim to facilitate contractual processes between parties and stimulate the real estate market. We seek to provide this service with transparency, credibility, quality, and efficiency. Our highly experienced and licensed team in the real estate field, affiliated with relevant authorities, is responsible for facilitating the leasing, ownership, or sale of properties and lands for property owners or those looking for real estate. This makes real estate transactions easy and beneficial for both parties, in addition to providing all complementary real estate services on behalf of the interested parties.
+    ',
+        
     // Projects Categories...
     'All' => 'All',
     'Remodeling' => 'Remodeling',

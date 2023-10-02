@@ -24,12 +24,22 @@
         <p>{{ __('index.Partners-Text') }}</p>
       </div>
 
-      <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+      <div class="portfolio-isotope">
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
+          @foreach($partners as $partner)
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <div class="partner-item">
+                <img src="{{ asset('storage/' . $partner->image_path) }}" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+
+          @endforeach
           
-          
-        </div><!-- End Projects Container -->
+        </div>
 
       </div>
 
