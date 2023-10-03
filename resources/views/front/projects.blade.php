@@ -36,7 +36,7 @@
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach ($projects as $project)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $project->city->name }}">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $project->city->name }}">
             <div class="portfolio-content h-100">
               <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -47,7 +47,18 @@
                 <a href="{{route('get_project',$project->id)}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div> -->
+          <!-- End Projects Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <a href="{{ route('get_project',$project->id) }}">
+                <div class="partner-item">
+                  <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
           @endforeach
           
         </div><!-- End Projects Container -->

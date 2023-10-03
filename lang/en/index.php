@@ -72,10 +72,10 @@ return [
     'Partners-Text' => 'Explore our trusted partnerships in the real estate industry, showcasing a legacy of excellence and innovation.',
     
     // Recent Blog Posts...
-    'Recent Blog Posts' => 'Recent Blog Posts',
-    'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
-    'Read More' => 'Read More',
-    'Move To Blog' => 'Move To Blog',
+    // 'Recent Blog Posts' => 'Recent Blog Posts',
+    // 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
+    // 'Read More' => 'Read More',
+    // 'Move To Blog' => 'Move To Blog',
     
     // Footer...
     'Alqayrawan, Alkhear Road' => 'Alqayrawan, Alkhear Road',
@@ -192,10 +192,13 @@ return [
     'Your message has been sent. Thank you!' => 'Your message has been sent. Thank you!',
     'Send Message' => 'Send Message',
     
-    // Blog Page...
-    'Blog Posts' => 'Blog Posts',
-    'Blog-Text' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
-    'Featured Posts' => 'Featured Posts',
+    // Recent Blog Posts...
+    'Recent Media News' => 'Recent Media News',
+    'Featured Media News' => 'Featured Media News',
+    'Media-Text' => 'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.',
+    'Read More' => 'Read More',
+    'Media' => 'Media',
+    'Move To Media News' => 'Move To Media News',
 
     // Blog Post Details...
     'Post Details' => 'Post Details',

@@ -6,7 +6,7 @@
   <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{{ asset('assets/img/breadcrumbs-bg.jpg') }}');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>{{ __('index.Post Details') }}</h2>
+      <h2 class="text-center">{{ __('index.Post Details') }}</h2>
       <ol>
         <li><a href="index.html">{{ __('index.Home') }}</a></li>
         <li>{{ __('index.Post Details') }}</li>
@@ -129,7 +129,7 @@
 
         
               <div class="sidebar-item recent-posts">
-                <h3 class="sidebar-title">{{ __('index.Featured Posts') }}</h3>
+                <h3 class="sidebar-title">{{ __('index.Featured Media News') }}</h3>
 
                 <div class="mt-3">
 

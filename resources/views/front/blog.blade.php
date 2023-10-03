@@ -6,10 +6,10 @@
   <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../assets/img/breadcrumbs-bg.jpg');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>{{ __('index.Blog') }}</h2>
+      <h2 class="text-center">{{ __('index.Media') }}</h2>
       <ol>
       <li><a href="{{ route('index') }}">{{ __('index.Home') }}</a></li>
-        <li>{{ __('index.Blog') }}</li>
+        <li>{{ __('index.Media') }}</li>
       </ol>
 
     </div>
@@ -20,9 +20,9 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class=" section-header">
-        <h2>{{ __('index.Blog Posts') }}</h2>
+        <h2>{{ __('index.Recent Media News') }}</h2>
         <p>
-          {{ __('index.Blog-Text') }}
+          {{ __('index.Media-Text') }}
         </p>
       </div>
 
@@ -75,7 +75,7 @@
 
         
               <div class="sidebar-item recent-posts">
-                <h3 class="sidebar-title">{{ __('index.Featured Posts') }}</h3>
+                <h3 class="sidebar-title">{{ __('index.Featured Media News') }}</h3>
 
                 <div class="mt-3">
 

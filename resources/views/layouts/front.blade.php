@@ -168,7 +168,7 @@
             </ul>
           </li>
           <li><a class="{{ Route::current()->uri() == App::getLocale() . '/partners' ? 'active' : '' }}" href="{{route('partners')}}">{{ __('index.Partners') }}</a></li> 
-          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ? 'active' : '' }}" href="{{route('articles')}}">{{ __('index.Blog') }}</a></li> 
+          <li><a class="{{ Route::current()->uri() == App::getLocale() . '/articles' ? 'active' : '' }}" href="{{route('articles')}}">{{ __('index.Media') }}</a></li> 
           <li><a class="{{ Route::current()->uri() == App::getLocale() . '/contact' ? 'active' : '' }}" href="{{route('contact')}}">{{ __('index.Contact') }}</a></li>
           <li class="dropdown">
             <a href="#"><span>{{ __('index.Language') }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>

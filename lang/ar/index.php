@@ -70,12 +70,14 @@ return [
     // Testimonials...
     'Partners' => 'شركاؤنا',
     'Partners-Text' => 'استكشف شراكاتنا الموثوقة في صناعة العقارات، حيث نعرض إرثًا من التفوق والابتكار.',
-    
+
     // Recent Blog Posts...
-    'Recent Blog Posts' => 'المقالات الحديثة',
-    'Discover the latest updates and engaging, informative articles covering various topics, providing valuable insights and detailed information to keep you constantly informed about all that is new in the world of real estate.' => 'اكتشف أحدث التحديثات والمقالات الشيقة والمفيدة التي تغطي مواضيع مختلفة، وتقدم نصائح قيمة ومعلومات مفصلة لتبقى على اطلاع دائم بكل ما هو جديد في عالم العقارات.',
+    'Recent Media News' => 'آخر الأخبار',
+    'Featured Media News' => 'الأخبار المميزة',
+    'Media-Text' => 'اكتشف آخر التحديثات والمقالات الشيقة والمفيدة التي تغطي مواضيع مختلفة، وتقدم نصائح قيمة ومعلومات مفصلة لتبقى على اطلاع دائم بكل ما هو جديد في عالم العقارات.',
     'Read More' => 'اقرأ المزيد',
-    'Move To Blog' => 'الانتقال إلى المدونة',
+    'Media' => 'المركز الاعلامي',
+    'Move To Media News' => 'الانتقال الى المركز الاعلامي',
     
     // Footer...
     'Alqayrawan, Alkhear Road' => 'القيروان، طريق الخير',
@@ -179,12 +181,6 @@ return [
     'Loading' => 'تحميل',
     'Your message has been sent. Thank you!' => 'تم ارسال رسالتك بنجاح, شكرا لك',
     'Send Message' => 'ارسال الرسالة',
-    
-    // Blog Page...
-    'Blog Posts' => 'المقالات الحديثة',
-    'Blog-Text' => 'اكتشف أخر التحديثات والمقالات الشيقة والمفيدة التي تغطي مواضيع مختلفة، وتقدم نصائح قيمة ومعلومات مفصلة لتبقى على اطلاع دائم بكل ما هو جديد في عالم العقارات.',
-    'Featured Posts' => 'مقالات مميزة',
-    'Move To Blog' => 'الإنتقال إلى المدونة',
 
     // Blog Post Details...
     'Post Details' => 'تفاصيل المقال',
