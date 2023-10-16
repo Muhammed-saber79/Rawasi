@@ -371,31 +371,31 @@
 
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          @foreach ($projects as $project)
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-            <div class="portfolio-content h-100">
-              <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{ $project->city->name }}</h4>
-                <p>{{$project->title}}</p>
-                
-                <a href="{{ asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image) }}" title="{{ $project->city->name }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="{{ route('get_project',$project->id) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            @foreach ($projects as $project)
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{ $project->city->name }}</h4>
+                  <p>{{$project->title}}</p>
+                  
+                  <a href="{{ asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image) }}" title="{{ $project->city->name }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ route('get_project',$project->id) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-content">
+                <a href="{{ route('get_project',$project->id) }}">
+                  <div class="partner-item">
+                    <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
+                  </div>
+                </a>
               </div>
             </div>
-          </div> -->
-          <!-- End Projects Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-content h-100">
-              <a href="{{ route('get_project',$project->id) }}">
-                <div class="partner-item">
-                  <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
-                </div>
-              </a>
-            </div>
-          </div>
-          @endforeach
+            @endforeach
 
           </div><!-- End Projects Container -->
 
@@ -415,7 +415,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class=" section-header">
-          <h2>{{ __('index.Recent Media News') }}</h2>
+          <h2>{{ __('index.Media') }}</h2>
           <p>
             {{ __('index.Media-Text') }}
           </p>

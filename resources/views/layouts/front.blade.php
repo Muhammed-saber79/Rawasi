@@ -267,6 +267,13 @@
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- WhatsApp Button -->
+  <div class="whatsapp-button">
+      <a href="your-whatsapp-link" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+      </a>
+  </div>
+
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
