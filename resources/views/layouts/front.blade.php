@@ -65,11 +65,11 @@
         position: relative;
         width: 100%;
     }
-    @media (min-width: 1800px) {
+    @media (min-width: 1500px) {
         /* For screens wider than 1701px, apply object-fit: cover */
         #intro-video {
             object-fit: cover;
-            height: 90vh;
+            height: 100vh;
             width: 100%;
         }
 
@@ -83,7 +83,7 @@
         /* For screens up to 1700px wide, take full width */
         #intro-video {
             object-fit: cover;
-            height: 90vh;
+            height: 100vh;
             width: 100%;
         }
 
@@ -295,7 +295,6 @@
       languageDropdown.addEventListener('click', () => {
           languageSubMenu.classList.toggle('show-language-dropdown');
       });
-
   </script>
 
 </body>

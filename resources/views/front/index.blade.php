@@ -11,7 +11,7 @@
 
       <video id="intro-video" poster loop playsinline preload="auto" autoplay muted>
         <!-- <source src="https://rawasi.s3.ap-south-1.amazonaws.com/intro6.mp4" type="video/mp4"> -->
-        <source src="{{ asset('storage/intro.mp4') }}" type="video/mp4">
+        <source src="{{ asset('assets/videos/intro.mp4') }}" type="video/mp4">
       </video>
       
       <button id="btn" onclick="toggleSound()">
@@ -472,5 +472,16 @@
     <!-- End Recent Blog Posts Section -->
   
   </main><!-- End #main -->
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('#header');
+      if (window.scrollY > 0) {
+        navbar.classList.add('scroll-effect');
+      } else {
+        navbar.classList.remove('scroll-effect');
+      }
+    })
+  </script>
 
 @endsection
