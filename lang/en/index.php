@@ -153,7 +153,7 @@ return [
 
     'service-9' => '
     <ul>
-    <li style="margin-bottom: 15px">The company provides project management services, which are a fundamental pillar in achieving positive returns for all company projects. These services include the appointment of consultancy service providers and their direct management to ensure quality in design and project execution supervision.</li>
+    <li style="margin-bottom: 15px">The company provides project managem-ent services, which are a fundamental pillar in achieving positive returns for all company projects. These services include the appointment of consultancy service providers and their direct management to ensure quality in design and project execution supervision.</li>
     <li>The Project Management sector handles cost engineering, construction application analysis, and value engineering to ensure the delivery of high-quality technical and managerial services in accordance with the highest global standards.</li>
     </ul>
     ',

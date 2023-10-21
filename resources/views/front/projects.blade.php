@@ -51,10 +51,10 @@
           <!-- End Projects Item -->
 
           <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-content h-100">
+            <div class="portfolio-content">
               <a href="{{ route('get_project',$project->id) }}">
-                <div class="partner-item">
-                  <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid" alt="">
+                <div class="partner-item h-16">
+                  <img src="{{asset('images/'.$project->getTranslation('title', 'en').'/'.$project->images[0]->image)}}" class="img-fluid h-100" alt="">
                 </div>
               </a>
             </div>

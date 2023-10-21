@@ -52,7 +52,7 @@
                 </div>
                 <h3>{{ __('index.Real estate development') }}</h3>
                 <h6 style="line-height: 1.5;" class="w-100 text-justify">
-                  {{ __('index.service-2') }}
+                  {!! __('index.service-2') !!}
                 </h6>
               </div>
 
